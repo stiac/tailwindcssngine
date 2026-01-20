@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.17] - 2026-02-05
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_game.tpl` con utility Tailwind CSS per card gioco e layout compatto.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.16] - 2026-02-04
 ### Added
 - N/A
