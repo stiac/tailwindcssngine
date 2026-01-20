@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.31] - 2026-02-19
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_post_reel.tpl` con utility Tailwind CSS per header, statistiche, azioni e tip.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.30] - 2026-02-18
 ### Added
 - N/A
