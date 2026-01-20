@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.34] - 2026-02-22
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_reel.tpl` con utility Tailwind CSS per layout del player, overlay e controlli.
+
+### Fixed
+- Verificata la compatibilità CSS del layout reel con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.33] - 2026-02-21
 ### Added
 - N/A
