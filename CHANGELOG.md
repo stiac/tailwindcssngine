@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.25] - 2026-02-13
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_post.body.tpl` con utility Tailwind CSS per header, badge, testo e snippet.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.24] - 2026-02-12
 ### Added
 - N/A
