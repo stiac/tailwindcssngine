@@ -58,6 +58,10 @@
     {/if}
     <!-- CSS -->
 
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (CDN) -->
+
     <!-- CSS Customized -->
     {include file='_head.css.tpl'}
     <!-- CSS Customized -->
