@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.1**
+Versione: **1.3.2**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -16,6 +16,7 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 ## Utilizzo
 - Aggiungere classi Tailwind direttamente nei template `.tpl`.
 - I componenti possono essere ispirati ai blocchi Tailwind UI: https://catalyst.tailwindui.com/docs.
+- Le opzioni dei select categorie includono classi Tailwind per evidenziare l'elemento selezionato.
 
 ## Note
 - Nessuna build richiesta: Tailwind CSS è caricato via CDN.
