@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.28] - 2026-02-16
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_post.tpl` con utility Tailwind CSS per card, badge e azioni.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.27] - 2026-02-15
 ### Added
 - N/A
