@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.33] - 2026-02-21
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_profile_photo.tpl` con utility Tailwind CSS per layout griglia e foto profilo.
+
+### Fixed
+- Verificata la compatibilità CSS delle foto profilo con le utility Tailwind e la classe `pg_photo`.
+
+### Removed
+- N/A
+
 ## [1.3.32] - 2026-02-20
 ### Added
 - N/A
