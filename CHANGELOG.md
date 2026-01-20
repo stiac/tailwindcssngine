@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.16] - 2026-02-04
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_funding.tpl` con utility Tailwind CSS per layout, progress bar e call-to-action.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.15] - 2026-02-03
 ### Added
 - N/A
@@ -14,6 +27,7 @@ Tutte le modifiche rilevanti a questo progetto verranno documentate in questo fi
 
 ### Removed
 - N/A
+
 
 ## [1.3.14] - 2026-02-02
 ### Added
