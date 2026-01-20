@@ -48,13 +48,38 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fonts [Poppins|Font-Awesome] -->
 
+    <!-- Tailwind CSS (CDN, no build step) -->
+    <script>
+      // Tailwind config kept inline to avoid build tools and keep FTP-ready deployments.
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Outfit', 'system-ui', 'sans-serif']
+            },
+            colors: {
+              brand: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8'
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <!-- Tailwind CSS (CDN, no build step) -->
+
     <!-- CSS -->
     {if $system['language']['dir'] == "LTR"}
       <link href="{$system['system_url']}/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	  <link href="{$system['system_url']}/content/themes/{$system['theme']}/css/style.css?v={$system['system_version']}" rel="stylesheet">
+      <link href="{$system['system_url']}/content/themes/{$system['theme']}/css/style.css?v={$system['system_version']}" rel="stylesheet">
     {else}
       <link rel="stylesheet" href="{$system['system_url']}/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
-	  <link href="{$system['system_url']}/content/themes/{$system['theme']}/css/style.rtl.css?v={$system['system_version']}" rel="stylesheet">
+      <link href="{$system['system_url']}/content/themes/{$system['theme']}/css/style.rtl.css?v={$system['system_version']}" rel="stylesheet">
     {/if}
     <!-- CSS -->
 

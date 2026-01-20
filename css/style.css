@@ -1,4 +1,5 @@
-/*Basic*/
+/* Basic */
+/* Tailwind integration: keep legacy theme variables while Tailwind handles layout/utilities. */
 :root {
 	--body-font-family: "Inter", sans-serif;
 	--body-bg: #fff;

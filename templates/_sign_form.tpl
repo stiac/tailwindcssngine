@@ -8,7 +8,7 @@
 		{/if}
 	</style>
 
-	<div class="fr_auth_form">
+	<div class="fr_auth_form space-y-6">
 		<!-- signin -->
 		<div class="js_panel {if $do == 'up'}x-hidden{/if}">
 			<div class="text-center mt-4 mb-4">
@@ -23,7 +23,7 @@
 
 			{if isset($highlight)}<div class="alert alert-warning">{$highlight}</div>{/if}
 
-			<form class="js_ajax-forms" data-url="core/signin.php" method="POST">
+			<form class="js_ajax-forms space-y-4" data-url="core/signin.php" method="POST">
 				<!-- username or email -->
 				<div class="fr_welcome_field">
 					<input type="text" placeholder='{__("Email")} {__("or")} {__("Username")}' name="username_email" required>
@@ -65,7 +65,7 @@
 			</form>
 
 			{if $system['registration_enabled']}
-				<div class="mt-4 text-center fr_welcome_switch">
+				<div class="mt-4 text-center fr_welcome_switch text-sm text-slate-600">
 					{__("Do not have an account?")} <a href="{$system['system_url']}/signup{if $oauth_app_id}?oauth_app_id={$oauth_app_id}{/if}" class="js_toggle-panel text-link">{__("Sign Up")}</a>
 				</div>
 			{/if}
@@ -78,7 +78,7 @@
 				<h2 class="m-0 fr_welcome_title">{__("Create a new account")}</h2>
 			</div>
 
-			<form class="js_ajax-forms" data-url="core/signup.php" method="POST">
+			<form class="js_ajax-forms space-y-4" data-url="core/signup.php" method="POST">
 				{if $system['invitation_enabled']}
 					<!-- invitation code -->
 					<div class="fr_welcome_field">
