@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.32] - 2026-02-20
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_product.tpl` con utility Tailwind CSS per card prodotto, badge promozione e dettagli stock.
+
+### Fixed
+- Verificata la compatibilità CSS del layout prodotti con le utility Tailwind esistenti.
+
+### Removed
+- N/A
+
 ## [1.3.31] - 2026-02-19
 ### Added
 - N/A
