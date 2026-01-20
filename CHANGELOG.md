@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.4] - 2026-01-23
+### Added
+- N/A
+
+### Changed
+- Aggiornati i campi personalizzati per usare classi Tailwind CSS e descrizioni con stile coerente.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.3] - 2026-01-22
 ### Added
 - N/A
