@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.14] - 2026-02-02
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_course.tpl` con utility Tailwind CSS per card corsi, badge e pulsante di iscrizione.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.13] - 2026-02-01
 ### Added
 - N/A
