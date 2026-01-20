@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.8] - 2026-01-27
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_candidate.tpl` con layout e componenti Tailwind CSS per i profili candidato.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.7] - 2026-01-26
 ### Added
 - N/A
@@ -14,6 +27,7 @@ Tutte le modifiche rilevanti a questo progetto verranno documentate in questo fi
 
 ### Removed
 - N/A
+
 
 ## [1.3.6] - 2026-01-25
 ### Added
