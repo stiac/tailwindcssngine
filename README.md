@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.34**
+Versione: **1.3.35**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -48,3 +48,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_product.tpl` usa utility Tailwind CSS per card prodotto, badge promozione e dettagli stock.
 - Il template `__feeds_reel.tpl` usa utility Tailwind CSS per il layout del player reel, overlay e controlli.
 - Il template `__feeds_profile_photo.tpl` usa utility Tailwind CSS per layout griglia e foto profilo.
+- Il template `__feeds_review.tpl` usa utility Tailwind CSS per layout recensioni, avatar, foto e pulsanti.

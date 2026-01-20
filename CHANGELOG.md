@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.35] - 2026-02-23
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_review.tpl` con utility Tailwind CSS per layout recensioni, avatar, foto e pulsanti.
+
+### Fixed
+- Verificata la compatibilità CSS delle recensioni con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.34] - 2026-02-22
 ### Added
 - N/A
