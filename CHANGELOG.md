@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.10] - 2026-01-29
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_comment.text.tpl` con utility Tailwind CSS per testo, immagini e audio.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.9] - 2026-01-28
 ### Added
 - N/A
