@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.25**
+Versione: **1.3.26**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -39,3 +39,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_page.tpl` usa utility Tailwind CSS per card pagina, badge verifica, contatore like e pulsanti di azione.
 - Il template `__feeds_post.body.photos.tpl` usa utility Tailwind CSS per layout galleria foto, gap e stati focus.
 - Il template `__feeds_post.body.tpl` usa utility Tailwind CSS per header post, badge, testo e snippet allegati.
+- Il template `__feeds_post.comments.tpl` usa utility Tailwind CSS per filtri, lista commenti e call-to-action.
