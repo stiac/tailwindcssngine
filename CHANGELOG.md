@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.6] - 2026-01-25
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_album.tpl` con layout e stile Tailwind CSS per le card degli album.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.5] - 2026-01-24
 ### Added
 - N/A
