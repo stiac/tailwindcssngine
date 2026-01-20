@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.18] - 2026-02-06
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_group.tpl` con utility Tailwind CSS per card gruppo, badge piano e pulsanti.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.17] - 2026-02-05
 ### Added
 - N/A
