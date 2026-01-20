@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.3] - 2026-01-22
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template delle righe categorie con utility Tailwind CSS per tipografia, badge e pulsanti.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.2] - 2026-01-21
 ### Added
 - N/A
