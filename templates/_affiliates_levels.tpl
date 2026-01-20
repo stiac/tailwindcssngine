@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="heading-small mb20">
   {__("level 1")}
 </div>

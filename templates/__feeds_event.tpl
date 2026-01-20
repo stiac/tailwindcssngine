@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl == "box"}
 	<li class="col-md-12 {if $_small}col-lg-6{/if} mb-3">
 		<div class="x_event_list">

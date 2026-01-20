@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl == "box"}
 	<li class="px-3 side_item_hover side_item_list d-flex align-items-start gap-3 x_group_list {if $_darker}darker{/if}">
 		<a href="{$system['system_url']}/pages/{$_page['page_name']}{if $_search}?ref=qs{/if}" class="flex-0">

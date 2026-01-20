@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="js_scroller">
   <ul>
     {foreach $results as $result}

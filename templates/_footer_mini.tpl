@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <footer class="mini-footer mb-3 px-3">
 	<div class="copyrights d-flex align-items-center justify-content-between">
 		<span class="flex-0 text-muted">&copy; {date('Y')} {__($system['system_title'])}</span>

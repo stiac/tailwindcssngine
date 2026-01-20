@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div id="invoice-wrapper-{$order['order_id']}" style="display: none;">
   <div id="invoice-{$order['order_hash']}">
     <div class="container">

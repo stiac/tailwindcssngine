@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-header with-nav">
   <div class="modal-title">
     <!-- panel nav -->

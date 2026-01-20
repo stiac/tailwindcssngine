@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="dropend js_live-notifications">
 	<a href="{$system['system_url']}/notifications" class="d-block py-1 body-color x_side_links {if $page == "notifications"}fw-semibold main{/if}">
 		<div class="d-inline-flex align-items-center position-relative main_bg_half">

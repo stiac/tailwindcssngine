@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {assign var="post" value=$photo['post']}
 
 <div class="lightbox-post" data-id="{if $photo['is_single']}{$post['post_id']}{else}{$photo['photo_id']}{/if}">

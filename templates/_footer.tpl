@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if !$user->_logged_in && !$system['newsfeed_public'] && $page == "index"}
 {else}
 	<!-- ads -->

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="reel-container position-absolute{if $_hidden || $_iteration > 1} hidden{/if}" data-id="{$post['post_id']}">
 	<div class="position-relative w-100 h-100">
 		<div class="reel-video-wrapper position-relative w-100 h-100">

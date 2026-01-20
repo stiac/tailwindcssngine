@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
 	<div class="album-card x_adslist overflow-hidden">
 		{if $album['cover']['blur']}<div class="x-blured">{/if}

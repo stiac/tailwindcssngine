@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <li>
 	<div class="conversation clearfix d-flex align-items-start py-1 gap-1 flex-wrap position-relative w-100 {if (isset($is_me) && $is_me) || $message['user_id'] == $user->_data['user_id']}right justify-content-end{/if}" id="{$message['message_id']}">
 		{if (!isset($is_me) || !$is_me) && $message['user_id'] != $user->_data['user_id']}

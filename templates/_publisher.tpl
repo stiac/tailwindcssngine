@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $user->_data['can_publish_posts']}
 	{if $system['verification_for_posts'] && !$user->_data['user_verified']}
 		<div class="px-3 side_item_list x_announcement">

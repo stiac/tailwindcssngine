@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- need payment -->
 <div class="{if $paid_image}pg_wrapper overflow-hidden clearfix mt-2 position-relative need-subscription{/if}">
 	{if $paid_image}

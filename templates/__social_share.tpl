@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <a target="_blank" href="http://www.facebook.com/sharer.php?u={$_link}" class="btn-icon-social">
   {include file='__svg_icons.tpl' icon="facebook" width="24px" height="24px"}
 </a>

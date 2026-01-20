@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {foreach $announcements as $announcement}
 	<div class="px-3 side_item_list text-with-list x_announcement">
 		{if $user->_logged_in}

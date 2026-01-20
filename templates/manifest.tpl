@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {
 "name": "{$system['system_title']}",
 "start_url": "{$system['system_url']}",

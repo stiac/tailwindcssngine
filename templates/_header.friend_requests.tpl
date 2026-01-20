@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="dropend js_live-requests">
 	<a href="{$system['system_url']}/people/friend_requests" class="d-block py-1 body-color x_side_links {if $view == "friend_requests"}fw-semibold main{/if}">
 		<div class="d-inline-flex align-items-center position-relative main_bg_half">

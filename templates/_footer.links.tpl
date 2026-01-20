@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- footer links -->
 <div class="{if $system['fluid_design']}container-fluid{else}container{/if}">
   <div class="row footer {if $page == 'index' && !$user->_logged_in}border-top-0{/if}">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="post-comments">
 	{if $user->_logged_in}
 		{if $_is_photo}

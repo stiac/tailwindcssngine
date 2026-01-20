@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $user->_logged_in}
 	<a href="{$system['system_url']}/saved" class="d-block py-1 body-color x_side_links x_hide_saved_link x_hide_mobi_side_link {if $page == "index" && $view == "saved"}fw-semibold main{/if}">
 		<div class="d-inline-flex align-items-center position-relative main_bg_half">

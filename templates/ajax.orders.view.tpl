@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-header">
   <h6 class="modal-title">
     {__("View Order")} #{$order['order_hash']}

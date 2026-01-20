@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="col-md-6 mb-4">
 	<div class="x_address h-100 p-3">
 		{if $post['needs_subscription']}

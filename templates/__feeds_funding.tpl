@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="col-sm-12 mb-4 pb-1">
 	{if $funding['needs_subscription']}
 		<div class="ptb20 plr20">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl == "box"}
     <div class="{if $_vsmall}col-md-6 col-lg-4{else}col-md-6 col-lg-3{/if}">
         <div class="ui-box">

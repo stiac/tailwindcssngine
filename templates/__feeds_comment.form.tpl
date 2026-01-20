@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="comment border-0 p-0 writer js_comment-form {if $post['comments_disabled']}x-hidden{/if}" data-handle="{$_handle}" data-id="{$_id}">
 	<div class="d-flex x_user_info gap-2">
 		<div class="comment-avatar flex-0">

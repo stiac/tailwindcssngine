@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="card">
   <div class="card-header with-icon">
     <i class="fa fa-university mr10"></i>{__("Bank Receipts")}

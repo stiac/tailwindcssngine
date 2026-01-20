@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="mb-3 overflow-hidden content panel-messages" data-cid="{$_node['chatbox_conversation']['conversation_id']}">
 	<h6 class="headline-font fw-semibold m-0 side_widget_title">
 		{__("Chatbox")}

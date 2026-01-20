@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {include file='_head.tpl'}
 {include file='_header.tpl'}
 
@@ -10,7 +11,7 @@
 		{/if}
 	</style>
 
-	<div class="d-flex w-100 h-100 position-relative flex-column py-4 overflow-hidden fr_welcome">
+	<div class="d-flex w-100 h-100 position-relative flex-column py-4 overflow-hidden fr_welcome flex min-h-screen">
 		<div class="w-100 position-relative fr_welcome_mid">
 			<div class="row m-md-0">
 				<div class="col-lg-5 col-md-6 p-md-0 align-self-center">
@@ -81,7 +82,7 @@
 
 {else}
 
-    <div class="row landing-row m-0">
+    <div class="row landing-row m-0 flex flex-col lg:flex-row">
 		<div class="col-lg-5 landing-left p-0">
 			<div class="landing-intro h-100 position-relative" style="background-image: url({if $system['system_wallpaper_default']}{$system['system_url']}/content/themes/{$system['theme']}/images/landing/welcome.jpg{else}{$system['system_uploads']}/{$system['system_wallpaper']}{/if})">
 				<div class="d-flex align-items-end position-md-absolute w-100 h-100 top-0 bottom-0 landing-intro-grad">

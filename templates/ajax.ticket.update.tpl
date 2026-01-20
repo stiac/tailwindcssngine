@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-header">
   <h6 class="modal-title">
     {__("Update Ticket")} #{$ticket['ticket_id']}

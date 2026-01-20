@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- posts-filter -->
 {if $_filter == "article"}
 	{if $user->_data['can_write_blogs']}

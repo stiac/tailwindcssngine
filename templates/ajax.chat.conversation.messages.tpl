@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $conversation['total_messages'] >= $system['max_results']}
 	<!-- see-more -->
 	<div class="alert alert-chat see-more small js_see-more" data-id={$conversation['conversation_id']} data-get="messages">

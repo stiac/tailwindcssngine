@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $ads_campaigns}
 	<!-- ads campaigns -->
 	{foreach $ads_campaigns as $campaign}

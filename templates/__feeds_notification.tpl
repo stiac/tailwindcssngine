@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl == "with-action"}
 	<li class="feeds-item feeds-action-item {if !$notification['seen']}unread{/if}" data-id="{$notification['notification_id']}">
 		<div class="px-3 side_item_hover d-flex align-items-center justify-content-between side_item_list gap-3 x_notification">

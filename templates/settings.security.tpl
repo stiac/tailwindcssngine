@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $sub_view == "password"}
 	<div class="p-3 w-100">
 		<div class="x-hidden x_menu_sidebar_back mb-3">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- need age verification -->
 <div class="p-3">
 	<div class="text-center text-muted py-5">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="col-6 col-xl-3 pb-2 mb-4">
 	<div class="position-relative product {if $_boosted}boosted{/if}">
 		{if $_boosted}

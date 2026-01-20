@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="card">
 
   {if $sub_view == ""}

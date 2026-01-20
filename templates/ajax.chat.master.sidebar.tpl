@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {foreach $sidebar_friends as $_user}
 	<div class="chat-avatar-wrapper clickable js_chat-start" data-uid="{$_user['user_id']}" data-name="{if $system['show_usernames_enabled']}{$_user['user_name']}{else}{$_user['user_firstname']} {$_user['user_lastname']}{/if}" data-link="{$_user['user_name']}" data-picture="{$_user['user_picture']}" data-bs-toggle="tooltip" data-bs-placement="left" title="{if $system['show_usernames_enabled']} {$_user['user_name']} {else} {$_user['user_firstname']} {$_user['user_lastname']} {/if}">
 		<div class="chat-avatar position-relative mx-auto">
