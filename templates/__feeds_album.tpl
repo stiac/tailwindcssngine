@@ -1,15 +1,19 @@
-<div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-	<div class="album-card x_adslist overflow-hidden">
+<div class="w-full px-2 mb-4 sm:w-1/2 lg:w-1/3 xl:w-1/4">
+	<!-- Card wrapper con layout responsive basato su utility Tailwind -->
+	<div class="album-card x_adslist overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
+		<!-- Cover immagine con supporto blur esistente -->
 		{if $album['cover']['blur']}<div class="x-blured">{/if}
-		<a class="album-cover d-block w-100 h-100" href="{$system['system_url']}/{$album['path']}/album/{$album['album_id']}" style="background-image:url({$album['cover']['source']});"></a>
+		<a class="album-cover block aspect-square w-full bg-cover bg-center" href="{$system['system_url']}/{$album['path']}/album/{$album['album_id']}" style="background-image:url({$album['cover']['source']});"></a>
 		{if $album['cover']['blur']}</div>{/if}
-		<div class="album-details p-2">
-			<div class="text-truncate">
-				<a href="{$system['system_url']}/{$album['path']}/album/{$album['album_id']}" class="fw-medium body-color">{__($album['title'])}</a>
+		<div class="album-details p-3">
+			<div class="truncate">
+				<!-- Titolo album con tipografia e hover Tailwind -->
+				<a href="{$system['system_url']}/{$album['path']}/album/{$album['album_id']}" class="text-sm font-semibold text-slate-900 hover:text-slate-700">{__($album['title'])}</a>
 			</div>
-			<div class="d-flex align-items-center justify-content-between text-muted small">
-				{$album['photos_count']} {__("photos")}
-				<div class="">
+			<div class="mt-2 flex items-center justify-between text-xs text-slate-500">
+				<span>{$album['photos_count']} {__("photos")}</span>
+				<!-- Indicatori privacy con tooltip -->
+				<div class="text-slate-400">
 					{if $album['privacy'] == "me"}
 						<i class="fa fa-user-lock" data-bs-toggle="tooltip" title='{__("Shared with")}: {__("Only Me")}'></i>
 					{elseif $album['privacy'] == "friends"}
