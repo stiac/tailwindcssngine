@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.5] - 2026-01-24
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template delle attività per usare utility Tailwind CSS e migliorare la leggibilità dei contenuti.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.4] - 2026-01-23
 ### Added
 - N/A
