@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.26] - 2026-02-14
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_post.comments.tpl` con utility Tailwind CSS per filtri, lista commenti e call-to-action.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.25] - 2026-02-13
 ### Added
 - N/A
