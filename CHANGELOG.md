@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.36] - 2026-02-24
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_user.tpl` con utility Tailwind CSS per card utente, avatar, badge e layout pulsanti.
+
+### Fixed
+- Verificata la compatibilità CSS del layout utenti con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.35] - 2026-02-23
 ### Added
 - N/A

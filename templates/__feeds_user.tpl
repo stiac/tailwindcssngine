@@ -1,14 +1,15 @@
 {if $_tpl == "box"}
-    <div class="{if $_vsmall}col-md-6 col-lg-4{else}col-md-6 col-lg-3{/if}">
-        <div class="ui-box">
+    <div class="{if $_vsmall}col-md-6 col-lg-4{else}col-md-6 col-lg-3{/if} mb-6">
+        <!-- Tailwind: card utente con layout, bordo e spaziature -->
+        <div class="ui-box flex flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm">
             <div class="img">
                 <a href="{$system['system_url']}/{$_user['user_name']}">
-                    <img alt="" src="{$_user['user_picture']}" />
+                    <img alt="" src="{$_user['user_picture']}" class="h-16 w-16 rounded-full object-cover ring-1 ring-slate-200" />
                 </a>
             </div>
             <div class="mt10 truncate">
                 <span class="js_user-popover" data-uid="{$_user['user_id']}">
-                    <a class="h6" href="{$system['system_url']}/{$_user['user_name']}">
+                    <a class="h6 text-slate-900 hover:text-slate-700" href="{$system['system_url']}/{$_user['user_name']}">
                         {if $system['show_usernames_enabled']}
                             {$_user['user_name']}
                         {else}
@@ -22,10 +23,11 @@
             </div>
 			{if $_user['monetization_plan']}
 				<div class="mt10">
-					<span class="badge badge-info">{print_money($_user['monetization_plan']['price'])} / {if $_user['monetization_plan']['period_num'] != '1'}{$_user['monetization_plan']['period_num']}{/if} {__($_user['monetization_plan']['period']|ucfirst)}</span>
+					<span class="badge badge-info inline-flex items-center rounded-full bg-sky-50 px-2 py-0.5 text-xs font-semibold text-sky-700 ring-1 ring-inset ring-sky-200">{print_money($_user['monetization_plan']['price'])} / {if $_user['monetization_plan']['period_num'] != '1'}{$_user['monetization_plan']['period_num']}{/if} {__($_user['monetization_plan']['period']|ucfirst)}</span>
 				</div>
 			{/if}
-            <div class="mt10">
+            <!-- Tailwind: pulsanti con gap uniforme -->
+            <div class="mt10 flex flex-wrap items-center justify-center gap-2">
                 <!-- buttons -->
                 {if $_connection == "request"}
                     <button type="button" class="btn btn-sm btn-primary js_friend-accept" data-uid="{$_user['user_id']}">{__("Confirm")}</button>
@@ -143,11 +145,12 @@
         </div>
     </div>
 {elseif $_tpl == "list"}
-    <li class="feeds-item px-3 side_item_hover side_item_list" {if $_user['id']}data-id="{$_user['id']}" {/if}>
-		<div class="d-flex align-items-center justify-content-between x_user_info {if $_small}small{/if}">
+    <li class="feeds-item px-3 side_item_hover side_item_list flex items-center justify-between gap-3 py-3" {if $_user['id']}data-id="{$_user['id']}" {/if}>
+		<!-- Tailwind: layout riga utente con avatar e dettagli -->
+		<div class="d-flex align-items-center justify-content-between x_user_info {if $_small}small{/if} w-full">
 			<div class="d-flex align-items-center position-relative mw-0">
 				<a class="position-relative flex-0" href="{$system['system_url']}/{$_user['user_name']}{if $_search}?ref=qs{/if}">
-					<img src="{$_user['user_picture']}" alt="{$_user['user_name']}" class="rounded-circle">
+					<img src="{$_user['user_picture']}" alt="{$_user['user_name']}" class="rounded-circle h-10 w-10 object-cover ring-1 ring-slate-200">
 					{if $_reaction}
 						<div class="data-reaction">
 							<div class="inline-emoji no_animation">
@@ -157,7 +160,7 @@
 					{/if}
 				</a>
 				<div class="mw-0 text-truncate mx-2 px-1">
-					<div class="fw-semibold text-truncate">
+					<div class="fw-semibold text-truncate flex flex-wrap items-center gap-1">
 						<span class="name js_user-popover" data-uid="{$_user['user_id']}">
 							<a href="{$system['system_url']}/{$_user['user_name']}{if $_search}?ref=qs{/if}" class="body-color">
 								{if $system['show_usernames_enabled']}
@@ -179,28 +182,29 @@
 					</div>
 					{if $system['show_usernames_enabled']}
 					{else}
-						<p class="m-0 text-muted text-truncate small">@{$_user['user_name']}</p>
+						<p class="m-0 text-muted text-truncate small text-slate-500">@{$_user['user_name']}</p>
 					{/if}
 					{if $_connection != "me" && $_user['mutual_friends_count'] > 0}
-						<p class="m-0 text-muted text-truncate small">
+						<p class="m-0 text-muted text-truncate small text-slate-500">
 							<span class="" data-toggle="modal" data-url="users/mutual_friends.php?uid={$_user['user_id']}">{$_user['mutual_friends_count']} {__("mutual friends")}</span>
 						</p>
 					{/if}
 					{if $_donation}
-						<p class="m-0 text-muted text-truncate small">
-							<span class="badge badge-success">{print_money($_donation)}</span>
+						<p class="m-0 text-muted text-truncate small text-slate-500">
+							<span class="badge badge-success inline-flex items-center rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700 ring-1 ring-inset ring-emerald-200">{print_money($_donation)}</span>
 							<span class="js_moment" data-time="{$_donation_time}">{$_donation_time}</span>
 						</p>
 					{/if}
 					{if $_merits_count}
-						<p class="m-0 text-muted text-truncate small">
+						<p class="m-0 text-muted text-truncate small text-slate-500">
 							{$_merits_count} {__("Merits")}
 						</p>
 					{/if}
 				</div>
 			</div>
 			{if !$_prusrs == "pro"}
-				<div class="flex-0">
+				<!-- Tailwind: contenitore pulsanti allineati -->
+				<div class="flex-0 flex flex-wrap items-center justify-end gap-2">
 					<!-- buttons -->
 					{if $_connection == "request"}
 						<button type="button" class="btn btn-main btn-sm js_friend-accept" data-uid="{$_user['user_id']}">{__("Confirm")}</button>
