@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.19] - 2026-02-07
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_job.tpl` con utility Tailwind CSS per card lavoro, badge promozione e pulsante di candidatura.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.18] - 2026-02-06
 ### Added
 - N/A
