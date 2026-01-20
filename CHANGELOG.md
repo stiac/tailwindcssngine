@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.7] - 2026-01-26
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_blog.tpl` con layout e componenti Tailwind CSS per il feed dei blog.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.6] - 2026-01-25
 ### Added
 - N/A

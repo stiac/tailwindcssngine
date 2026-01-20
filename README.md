@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.6**
+Versione: **1.3.7**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -22,3 +22,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Nessuna build richiesta: Tailwind CSS è caricato via CDN.
 - Aggiornare `CHANGELOG.md` e `VERSION` ad ogni rilascio.
 - Il template `__feeds_album.tpl` usa layout e tipografia Tailwind per le card degli album.
+- Il template `__feeds_blog.tpl` usa utility Tailwind per le card del blog e le versioni compatte.
