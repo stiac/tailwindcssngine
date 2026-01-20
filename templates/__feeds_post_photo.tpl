@@ -1,11 +1,15 @@
 <!-- post body -->
-<div class="post-body {if $_lightbox}pt0{/if}">
+<!-- Tailwind: base spacing + typography for post card layout -->
+<div class="post-body {if $_lightbox}pt0{/if} text-slate-900">
 	<!-- post header -->
-	<div class="d-flex position-relative x_user_info post-header">
+	<!-- Tailwind: flex header layout with gap and alignment -->
+	<div class="d-flex position-relative x_user_info post-header flex items-start gap-3">
 		<!-- post picture -->
-		<div class="post-avatar position-relative flex-0">
+		<!-- Tailwind: prevent avatar shrink -->
+		<div class="post-avatar position-relative flex-0 shrink-0">
 			{if $post['is_anonymous']}
-				<div class="post-avatar-anonymous text-white rounded-circle overflow-hidden d-flex align-items-center justify-content-center">
+				<!-- Tailwind: center icon inside anonymous avatar -->
+				<div class="post-avatar-anonymous text-white rounded-circle overflow-hidden d-flex align-items-center justify-content-center flex items-center">
 					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.13889 16.124C6.065 16.124 5.19444 16.9635 5.19444 17.999C5.19444 19.0346 6.065 19.874 7.13889 19.874C8.21278 19.874 9.08333 19.0346 9.08333 17.999C9.08333 16.9635 8.21278 16.124 7.13889 16.124ZM3.25 17.999C3.25 15.928 4.99112 14.249 7.13889 14.249C8.57833 14.249 9.83511 15.0031 10.5075 16.124H13.4925C14.1649 15.0031 15.4217 14.249 16.8611 14.249C19.0089 14.249 20.75 15.928 20.75 17.999C20.75 20.0701 19.0089 21.749 16.8611 21.749C14.7133 21.749 12.9722 20.0701 12.9722 17.999L11.0278 17.999C11.0278 20.0701 9.28666 21.749 7.13889 21.749C4.99112 21.749 3.25 20.0701 3.25 17.999ZM16.8611 16.124C15.7872 16.124 14.9167 16.9635 14.9167 17.999C14.9167 19.0346 15.7872 19.874 16.8611 19.874C17.935 19.874 18.8056 19.0346 18.8056 17.999C18.8056 16.9635 17.935 16.124 16.8611 16.124Z" fill="currentColor"/><path d="M5.31634 4.59645C5.6103 2.70968 7.67269 1.66315 9.35347 2.59225L9.96847 2.93221C11.2351 3.63236 12.7647 3.63236 14.0313 2.93221L14.6463 2.59225C16.3271 1.66315 18.3895 2.70968 18.6834 4.59644L19.7409 11.384C19.7788 11.6271 19.695 11.8734 19.5167 12.043C19.3383 12.2125 19.0882 12.2838 18.8472 12.2337C16.7318 11.7939 10.9673 11.1659 5.13538 12.2371C4.89638 12.281 4.65092 12.2064 4.47679 12.0369C4.30265 11.8674 4.22142 11.6241 4.25883 11.384L5.31634 4.59645Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.0005 11.9989C8.22613 11.9989 4.89604 12.6584 2.66477 13.6566C2.18196 13.8726 1.59501 13.6972 1.35376 13.265C1.11251 12.8327 1.30834 12.3072 1.79114 12.0912C4.3613 10.9414 8.00877 10.249 12.0005 10.249C15.9922 10.249 19.6397 10.9414 22.2098 12.0912C22.6926 12.3072 22.8885 12.8327 22.6472 13.265C22.406 13.6972 21.819 13.8726 21.3362 13.6566C19.1049 12.6584 15.7748 11.9989 12.0005 11.9989Z" fill="currentColor"/></svg>
 				</div>
 			{else}
@@ -15,15 +19,17 @@
 		</div>
 		<!-- post picture -->
 		
-		<div class="mw-0 mx-2">
+		<!-- Tailwind: allow text truncation and spacing -->
+		<div class="mw-0 mx-2 min-w-0">
 			<!-- post meta -->
-			<div class="post-meta">
+			<!-- Tailwind: stack author and meta lines -->
+			<div class="post-meta flex flex-col gap-1">
 				<!-- post author -->
 				{if $post['is_anonymous']}
-					<span class="post-author fw-semibold">{__("Anonymous")}</span>
+					<span class="post-author fw-semibold text-sm">{__("Anonymous")}</span>
 				{else}
 					<span class="js_user-popover" data-type="{$post['user_type']}" data-uid="{$post['user_id']}">
-						<a class="post-author fw-semibold body-color" href="{$post['post_author_url']}">{$post['post_author_name']}</a>
+						<a class="post-author fw-semibold body-color text-sm" href="{$post['post_author_url']}">{$post['post_author_name']}</a>
 					</span>
 					{if $post['post_author_verified']}
 						<span class="verified-badge" data-bs-toggle="tooltip" {if $post['user_type'] == "user"}title='{__("Verified User")}'{else}title='{__("Verified Page")}'{/if}>
@@ -39,10 +45,11 @@
 				<!-- post author -->
 
 				<!-- post time & location & privacy -->
-				<div class="post-time text-muted">
-					<a href="{$system['system_url']}/posts/{$post['post_id']}" class="js_moment text-muted" data-time="{$post['time']}">{$post['time']}</a>
+				<!-- Tailwind: small muted meta line -->
+				<div class="post-time text-muted text-xs text-slate-500">
+					<a href="{$system['system_url']}/posts/{$post['post_id']}" class="js_moment text-muted text-slate-500 hover:text-slate-700" data-time="{$post['time']}">{$post['time']}</a>
 					{if $post['location']}
-						<span class="fw-bold mx-1">·</span> <span>{$post['location']}</span>
+						<span class="fw-bold mx-1">·</span> <span class="text-slate-500">{$post['location']}</span>
 					{/if}
 					<span class="fw-bold mx-1">·</span>
 					{if $post['privacy'] == "me"}
@@ -64,11 +71,14 @@
 
 	<!-- photo -->
 	{if !$_lightbox}
+		<!-- Tailwind: add top spacing for media block -->
 		<div class="mt-2">
-			<div class="pg_wrapper overflow-hidden clearfix">
+			<!-- Tailwind: rounded media container -->
+			<div class="pg_wrapper overflow-hidden clearfix rounded-lg border border-slate-200/60">
 				<div class="pg_1x {if $photo['blur']}x-blured{/if}">
 					<a href="{$system['system_url']}/photos/{$photo['photo_id']}" class="js_lightbox d-block position-relative bg-transparent w-100 h-100" data-id="{$photo['photo_id']}" data-image="{$system['system_uploads']}/{$photo['source']}" data-context="{if $photo['is_single']}album{else}post{/if}">
-						<img src="{$system['system_uploads']}/{$photo['source']}">
+						<!-- Tailwind: ensure image covers container -->
+						<img src="{$system['system_uploads']}/{$photo['source']}" class="block w-full h-auto object-cover">
 					</a>
 				</div>
 			</div>
@@ -76,18 +86,20 @@
 	{/if}
 	<!-- photo -->
 
-	<div class="d-flex mt-2 pt-1">
-		<div class="post_empty_space flex-0"></div>
-		<div class="flex-1">
+	<!-- Tailwind: action area layout -->
+	<div class="d-flex mt-2 pt-1 flex items-start gap-3">
+		<div class="post_empty_space flex-0 shrink-0"></div>
+		<div class="flex-1 min-w-0">
 			<!-- post stats -->
-			<div class="post-stats d-flex align-items-center">
+			<!-- Tailwind: inline stats with spacing -->
+			<div class="post-stats d-flex align-items-center flex flex-wrap gap-2 text-sm text-slate-600">
 				<!-- reactions stats -->
 				{if $photo['reactions_total_count'] > 0}
 					<div class="pointer" data-toggle="modal" data-url="posts/who_reacts.php?{if $photo['is_single']}post_id={$post['post_id']}{else}photo_id={$photo['photo_id']}{/if}">
-						<div class="reactions-stats d-flex align-items-center">
+						<div class="reactions-stats d-flex align-items-center flex flex-wrap gap-1">
 							{foreach $photo['reactions'] as $reaction_type => $reaction_count}
 								{if $reaction_count > 0}
-									<div class="reactions-stats-item bg-white rounded-circle position-relative d-inline-flex align-middle align-items-center justify-content-center">
+									<div class="reactions-stats-item bg-white rounded-circle position-relative d-inline-flex align-middle align-items-center justify-content-center shadow-sm">
 										<div class="inline-emoji no_animation">
 											{include file='__reaction_emojis.tpl' _reaction=$reaction_type}
 										</div>
@@ -95,7 +107,7 @@
 								{/if}
 							{/foreach}
 							<!-- reactions count -->
-							<span>
+							<span class="text-slate-700">
 								{$photo['reactions_total_count_formatted']}
 							</span>
 							<!-- reactions count -->
@@ -106,13 +118,13 @@
 				<!-- reactions stats -->
 
 				<!-- comments -->
-				<span class="pointer js_comments-toggle">
+				<span class="pointer js_comments-toggle hover:text-slate-800">
 					{$photo['comments_formatted']} {__("Comments")}
 				</span>
 				<!-- comments -->
 
 				<!-- shares -->
-				<span class="pointer {if $post['shares'] == 0}x-hidden{/if}" data-toggle="modal" data-url="posts/who_shares.php?post_id={$post['post_id']}">
+				<span class="pointer {if $post['shares'] == 0}x-hidden{/if} hover:text-slate-800" data-toggle="modal" data-url="posts/who_shares.php?post_id={$post['post_id']}">
 					<span class="fw-bold mx-1">·</span>{$post['shares_formatted']} {__("Shares")}
 				</span>
 				<!-- shares -->
@@ -121,9 +133,10 @@
 			
 			<!-- post actions -->
 			{if $user->_logged_in}
-				<div class="post-actions d-flex align-items-center justify-content-between mx-0">
+				<!-- Tailwind: actions row with spacing -->
+				<div class="post-actions d-flex align-items-center justify-content-between mx-0 flex items-center gap-2">
 					<!-- reactions -->
-					<div class="action-btn position-relative rounded-circle main_bg_half p-2 lh-1 pointer unselectable reactions-wrapper {if $photo['i_react']}js_unreact-{if $photo['is_single']}post{else}photo{/if}{/if}" data-reaction="{$photo['i_reaction']}">
+					<div class="action-btn position-relative rounded-circle main_bg_half p-2 lh-1 pointer unselectable reactions-wrapper inline-flex items-center justify-center transition hover:shadow-sm {if $photo['i_react']}js_unreact-{if $photo['is_single']}post{else}photo{/if}{/if}" data-reaction="{$photo['i_reaction']}">
 						<!-- reaction-btn -->
 						<div class="reaction-btn position-relative">
 							{if !$photo['i_react']}
@@ -155,7 +168,7 @@
 					<!-- reactions -->
 
 					<!-- comment -->
-					<div class="action-btn position-relative rounded-circle main_bg_half p-2 lh-1 pointer js_comment {if $post['comments_disabled']}x-hidden{/if}">
+					<div class="action-btn position-relative rounded-circle main_bg_half p-2 lh-1 pointer js_comment inline-flex items-center justify-center transition hover:shadow-sm {if $post['comments_disabled']}x-hidden{/if}">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" class="position-relative"><path d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" /><path d="M11.9953 12H12.0043M15.9908 12H15.9998M7.99982 12H8.00879" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
 						<span class="d-none">{__("Comment")}</span>
 					</div>
@@ -163,7 +176,7 @@
 
 					<!-- share -->
 					{if $post['privacy'] == "public"}
-						<div class="action-btn position-relative rounded-circle main_bg_half p-2 lh-1 pointer" data-toggle="modal" data-url="posts/share.php?do=create&post_id={$post['post_id']}&photo_id={$photo['photo_id']}">
+						<div class="action-btn position-relative rounded-circle main_bg_half p-2 lh-1 pointer inline-flex items-center justify-center transition hover:shadow-sm" data-toggle="modal" data-url="posts/share.php?do=create&post_id={$post['post_id']}&photo_id={$photo['photo_id']}">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" class="position-relative"><path d="M18 7C18.7745 7.16058 19.3588 7.42859 19.8284 7.87589C21 8.99181 21 10.7879 21 14.38C21 17.9721 21 19.7681 19.8284 20.8841C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8841C3 19.7681 3 17.9721 3 14.38C3 10.7879 3 8.99181 4.17157 7.87589C4.64118 7.42859 5.2255 7.16058 6 7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" /><path d="M12.0253 2.00052L12 14M12.0253 2.00052C11.8627 1.99379 11.6991 2.05191 11.5533 2.17492C10.6469 2.94006 9 4.92886 9 4.92886M12.0253 2.00052C12.1711 2.00657 12.3162 2.06476 12.4468 2.17508C13.3531 2.94037 15 4.92886 15 4.92886" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg>
 							<span class="d-none">{__("Share")}</span>
 						</div>
