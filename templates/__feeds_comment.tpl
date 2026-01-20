@@ -1,30 +1,32 @@
-<li>
-	<div class="comment {if $_is_reply}reply{/if}" data-id="{$_comment['comment_id']}" id="comment_{$_comment['comment_id']}">
-		<div class="d-flex x_user_info gap-2">
+<li class="list-none">
+	<!-- Tailwind utilities added for consistent spacing and card styling -->
+	<div class="comment {if $_is_reply}reply{/if} rounded-lg border border-slate-200/60 bg-white p-3 shadow-sm" data-id="{$_comment['comment_id']}" id="comment_{$_comment['comment_id']}">
+		<div class="d-flex x_user_info gap-2 flex items-start gap-3">
 			<!-- comment avatar -->
 			<div class="comment-avatar flex-0">
-				<a class="comment-avatar-picture rounded-circle overflow-hidden d-block" href="{$_comment['author_url']}" style="background-image:url({$_comment['author_picture']});"></a>
+				<!-- Avatar styling uses Tailwind utilities for sizing and centering -->
+				<a class="comment-avatar-picture rounded-circle overflow-hidden d-block h-10 w-10 rounded-full bg-cover bg-center bg-slate-100" href="{$_comment['author_url']}" style="background-image:url({$_comment['author_picture']});"></a>
 			</div>
 			<!-- comment avatar -->
 
 			<!-- comment body -->
-			<div class="comment-data flex-1">
-				<div class="d-flex align-items-start justify-content-between gap-2">
+			<div class="comment-data flex-1 min-w-0">
+				<div class="d-flex align-items-start justify-content-between gap-2 flex items-start gap-3">
 					<!-- comment author & text  -->
 					<div class="comment-inner-wrapper flex-1">
-						<div class="comment-inner js_notifier-flasher">
+						<div class="comment-inner js_notifier-flasher space-y-2">
 							<!-- author -->
-							<div class="comment-author">
+							<div class="comment-author flex flex-wrap items-center gap-2 text-sm">
 								<span class="js_user-popover" data-type="{$_comment['user_type']}" data-uid="{$_comment['user_id']}">
-									<a class="fw-semibold body-color" href="{$_comment['author_url']}">{$_comment['author_name']}</a>
+									<a class="fw-semibold body-color text-slate-900 hover:text-slate-700" href="{$_comment['author_url']}">{$_comment['author_name']}</a>
 								</span>
 								{if $_comment['author_verified']}
-									<span class="verified-badge" data-bs-toggle="tooltip" {if $_post['user_type'] == "user"}title='{__("Verified User")}'{else}title='{__("Verified Page")}'{/if}>
+									<span class="verified-badge inline-flex items-center text-blue-600" data-bs-toggle="tooltip" {if $_post['user_type'] == "user"}title='{__("Verified User")}'{else}title='{__("Verified Page")}'{/if}>
 										<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path fill="currentColor" d="M23,12l-2.44-2.79l0.34-3.69l-3.61-0.82L15.4,1.5L12,2.96L8.6,1.5L6.71,4.69L3.1,5.5L3.44,9.2L1,12l2.44,2.79l-0.34,3.7 l3.61,0.82L8.6,22.5l3.4-1.47l3.4,1.46l1.89-3.19l3.61-0.82l-0.34-3.69L23,12z M9.38,16.01L7,13.61c-0.39-0.39-0.39-1.02,0-1.41 l0.07-0.07c0.39-0.39,1.03-0.39,1.42,0l1.61,1.62l5.15-5.16c0.39-0.39,1.03-0.39,1.42,0l0.07,0.07c0.39,0.39,0.39,1.02,0,1.41 l-5.92,5.94C10.41,16.4,9.78,16.4,9.38,16.01z"></path></svg>
 									</span>
 								{/if}
 								{if $_comment['user_subscribed']}
-									<span class="pro-badge" data-bs-toggle="tooltip" title='{__($_comment['package_name'])} {__("Member")}'>
+									<span class="pro-badge inline-flex items-center text-amber-500" data-bs-toggle="tooltip" title='{__($_comment['package_name'])} {__("Member")}'>
 										<svg xmlns='http://www.w3.org/2000/svg' height='17' viewBox='0 0 24 24' width='17'><path d='M0 0h24v24H0z' fill='none'></path><path fill='currentColor' d='M12 2.02c-5.51 0-9.98 4.47-9.98 9.98s4.47 9.98 9.98 9.98 9.98-4.47 9.98-9.98S17.51 2.02 12 2.02zm-.52 15.86v-4.14H8.82c-.37 0-.62-.4-.44-.73l3.68-7.17c.23-.47.94-.3.94.23v4.19h2.54c.37 0 .61.39.45.72l-3.56 7.12c-.24.48-.95.31-.95-.22z'></path></svg>
 									</span>
 								{/if}
@@ -41,7 +43,7 @@
 					<!-- comment menu -->
 					{if $user->_logged_in}
 						<div class="comment-btn flex-0 dropdown">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" data-bs-toggle="dropdown" data-display="static" class="pointer position-relative"><path d="M11.9959 12H12.0049" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.9998 12H18.0088" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" data-bs-toggle="dropdown" data-display="static" class="pointer position-relative text-slate-400 hover:text-slate-600"><path d="M11.9959 12H12.0049" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.9998 12H18.0088" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 							<div class="dropdown-menu dropdown-menu-end">
 								{if !$_comment['edit_comment'] && !$_comment['delete_comment'] }
 									<div class="dropdown-item pointer" data-toggle="modal" data-url="data/report.php?do=create&handle=comment&id={$_comment['comment_id']}">{__("Report")}</div>
@@ -58,14 +60,14 @@
 				</div>
 
 				<!-- comment actions & time  -->
-				<div class="comment-actions d-flex align-items-start text-muted fw-medium">
+				<div class="comment-actions d-flex align-items-start text-muted fw-medium flex flex-wrap items-center gap-2 text-xs text-slate-500">
 					<!-- reactions stats -->
 					{if $_comment['reactions_total_count'] > 0}
 						<div class="pointer" data-toggle="modal" data-url="posts/who_reacts.php?comment_id={$_comment['comment_id']}">
-							<div class="reactions-stats d-flex align-items-center">
+							<div class="reactions-stats d-flex align-items-center flex items-center gap-1">
 								{foreach $_comment['reactions'] as $reaction_type => $reaction_count}
 									{if $reaction_count > 0}
-										<div class="reactions-stats-item bg-white rounded-circle position-relative d-inline-flex align-middle align-items-center justify-content-center">
+										<div class="reactions-stats-item bg-white rounded-circle position-relative d-inline-flex align-middle align-items-center justify-content-center h-5 w-5 border border-slate-200">
 											<div class="inline-emoji no_animation">
 												{include file='__reaction_emojis.tpl' _reaction=$reaction_type}
 											</div>
@@ -84,14 +86,14 @@
 					<!-- reactions stats -->
 		
 					<!-- reactions -->
-					<div class="pointer unselectable reactions-wrapper {if $_comment['i_react']}js_unreact-comment{/if}" data-reaction="{$_comment['i_reaction']}">
+					<div class="pointer unselectable reactions-wrapper {if $_comment['i_react']}js_unreact-comment{/if} text-slate-500 hover:text-slate-700" data-reaction="{$_comment['i_reaction']}">
 						<!-- reaction-btn -->
 						<div class="reaction-btn">
 							{if !$_comment['i_react']}
 								<div class="reaction-btn-icon d-none">
 									<i class="fa fa-smile fa-fw"></i>
 								</div>
-								<span class="reaction-btn-name text-link">{__("React")}</span>
+								<span class="reaction-btn-name text-link text-slate-500 hover:text-slate-700">{__("React")}</span>
 							{else}
 								<div class="reaction-btn-icon d-none">
 									<div class="inline-emoji no_animation">
@@ -117,14 +119,14 @@
 
 					<!-- comment -->
 					<span class="fw-bold mx-1">·</span>
-					<span class="text-link js_reply {if $_comment['comments_disabled']}x-hidden{/if}" data-username="{if $user->_data['user_name'] != $_comment['author_user_name']}{$_comment['author_user_name']}{/if}">
+					<span class="text-link js_reply {if $_comment['comments_disabled']}x-hidden{/if} text-slate-600 hover:text-slate-800" data-username="{if $user->_data['user_name'] != $_comment['author_user_name']}{$_comment['author_user_name']}{/if}">
 						{__("Reply")}
 					</span>
 					<!-- comment -->
 
 					<!-- time  -->
 					<span class="fw-bold mx-1">·</span>
-					<small class="js_moment fw-normal" data-time="{$_comment['time']}">{$_comment['time']}</small>
+					<small class="js_moment fw-normal text-slate-400" data-time="{$_comment['time']}">{$_comment['time']}</small>
 					<!-- time  -->
 				</div>
 				<!-- comment actions & time  -->
@@ -132,18 +134,18 @@
 				<!-- comment replies  -->
 				{if !$_is_reply}
 					{if !$standalone && $_comment['replies'] > 0}
-						<div class="pt-2 fw-semibold small text-muted js_replies-toggle">
-							<span class="text-link d-flex align-items-center gap-2">
+						<div class="pt-2 fw-semibold small text-muted js_replies-toggle text-xs text-slate-500">
+							<span class="text-link d-flex align-items-center gap-2 text-slate-600 hover:text-slate-800">
 								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 11.5667C1.25 5.83838 6.09523 1.25 12 1.25C17.9048 1.25 22.75 5.83838 22.75 11.5667C22.75 17.295 17.9048 21.8834 12 21.8834C11.3041 21.8843 10.6103 21.8199 9.92698 21.6916C9.68979 21.647 9.53909 21.6189 9.42696 21.6036C9.34334 21.5907 9.25931 21.6219 9.22775 21.6391C9.11322 21.6935 8.96068 21.7744 8.72714 21.8986C7.29542 22.66 5.62504 22.93 4.01396 22.6303C3.75381 22.5819 3.5384 22.4 3.44713 22.1517C3.35586 21.9033 3.40224 21.6252 3.56917 21.4199C4.03697 20.8445 4.35863 20.1513 4.50088 19.4052C4.53937 19.2 4.45227 18.9213 4.18451 18.6494C2.36972 16.8065 1.25 14.3144 1.25 11.5667ZM8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H8.00897C8.56126 13 9.00897 12.5523 9.00897 12C9.00897 11.4477 8.56126 11 8.00897 11H8ZM11.9955 11C11.4432 11 10.9955 11.4477 10.9955 12C10.9955 12.5523 11.4432 13 11.9955 13H12.0045C12.5568 13 13.0045 12.5523 13.0045 12C13.0045 11.4477 12.5568 11 12.0045 11H11.9955ZM14.991 12C14.991 11.4477 15.4387 11 15.991 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H15.991C15.4387 13 14.991 12.5523 14.991 12Z" fill="currentColor"/></svg>
 								{$_comment['replies']} {__("Replies")}
 							</span>
 						</div>
 					{/if}
 					
-					<div class="comment-replies {if !$standalone}x-hidden{/if}">
+					<div class="comment-replies {if !$standalone}x-hidden{/if} mt-2 space-y-2">
 						<!-- previous replies -->
 						{if $_comment['replies'] >= $system['min_results']}
-							<div class="main pointer px-3 text-center rounded-3 d-block side_item_hover side_item_list small fw-semibold js_see-more" data-get="comment_replies" data-id="{$_comment['comment_id']}" data-remove="true">
+							<div class="main pointer px-3 text-center rounded-3 d-block side_item_hover side_item_list small fw-semibold js_see-more text-slate-600 hover:text-slate-800" data-get="comment_replies" data-id="{$_comment['comment_id']}" data-remove="true">
 								<span class="">
 									{__("View previous replies")}
 								</span>
@@ -153,7 +155,7 @@
 						<!-- previous replies -->
 
 						<!-- replies -->
-						<ul class="js_replies w-100 x_comms_list">{if $_comment['replies'] > 0}
+						<ul class="js_replies w-100 x_comms_list space-y-2">{if $_comment['replies'] > 0}
 								{foreach $_comment['comment_replies'] as $reply}
 									{include file='__feeds_comment.tpl' _comment=$reply _is_reply=true}
 								{/foreach}
@@ -163,24 +165,25 @@
 						<!-- post a reply -->
 						{if $user->_logged_in}
 							<div class="x-hidden mt-2 pt-1 js_reply-form">
-								<div class="x-form comment-form d-flex align-items-end gap-2">
-									<textarea dir="auto" class="js_autosize js_mention js_post-reply bg-transparent px-0 w-100 m-0 py-2 border-0" rows="1" placeholder='{__("Write a Reply")}'></textarea>
-									<ul class="x-form-tools position-relative d-flex align-items-center flex-0 mb-2 gap-1">
+								<!-- Tailwind utilities provide soft background and spacing for the reply form -->
+								<div class="x-form comment-form d-flex align-items-end gap-2 rounded-lg border border-slate-200/70 bg-slate-50 p-2">
+									<textarea dir="auto" class="js_autosize js_mention js_post-reply bg-transparent px-0 w-100 m-0 py-2 border-0 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none" rows="1" placeholder='{__("Write a Reply")}'></textarea>
+									<ul class="x-form-tools position-relative d-flex align-items-center flex-0 mb-2 gap-1 text-slate-500">
 										{if $system['comments_photos_enabled']}
 											<li class="x-form-tools-attach lh-1">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" class="js_x-uploader" data-handle="comment"><path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.75"></path><circle cx="16.5" cy="7.5" r="1.5" stroke="currentColor" stroke-width="1.75"></circle><path d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path><path d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path></svg>
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" class="js_x-uploader text-slate-500 hover:text-slate-700" data-handle="comment"><path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.75"></path><circle cx="16.5" cy="7.5" r="1.5" stroke="currentColor" stroke-width="1.75"></circle><path d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path><path d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path></svg>
 											</li>
 										{/if}
 										{if $system['voice_notes_comments_enabled']}
 											<li class="x-form-tools-voice js_comment-voice-notes-toggle lh-1">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none"><path d="M17 7V11C17 13.7614 14.7614 16 12 16C9.23858 16 7 13.7614 7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7Z" stroke="currentColor" stroke-width="1.75"></path><path d="M17 7H14M17 11H14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"></path><path d="M20 11C20 15.4183 16.4183 19 12 19M12 19C7.58172 19 4 15.4183 4 11M12 19V22M12 22H15M12 22H9" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"></path></svg>
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" class="text-slate-500 hover:text-slate-700"><path d="M17 7V11C17 13.7614 14.7614 16 12 16C9.23858 16 7 13.7614 7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7Z" stroke="currentColor" stroke-width="1.75"></path><path d="M17 7H14M17 11H14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"></path><path d="M20 11C20 15.4183 16.4183 19 12 19M12 19C7.58172 19 4 15.4183 4 11M12 19V22M12 22H15M12 22H9" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"></path></svg>
 											</li>
 										{/if}
 										<li class="x-form-tools-emoji js_emoji-menu-toggle lh-1">
-											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="12" r="9"></circle> <line x1="9" y1="10" x2="9.01" y2="10"></line> <line x1="15" y1="10" x2="15.01" y2="10"></line> <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path></svg>
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500 hover:text-slate-700"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="12" r="9"></circle> <line x1="9" y1="10" x2="9.01" y2="10"></line> <line x1="15" y1="10" x2="15.01" y2="10"></line> <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path></svg>
 										</li>
 										<li class="x-form-tools-post js_post-reply">
-											<button type="button" class="btn btn-sm btn-main">{__("Post")}</button>
+											<button type="button" class="btn btn-sm btn-main px-3 py-1 text-xs font-semibold uppercase tracking-wide">{__("Post")}</button>
 										</li>
 									</ul>
 								</div>

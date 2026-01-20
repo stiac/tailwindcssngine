@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.12] - 2026-01-31
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_comment.tpl` con utility Tailwind CSS per layout, badge e azioni.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.11] - 2026-01-30
 ### Added
 - N/A
