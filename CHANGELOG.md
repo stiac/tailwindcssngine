@@ -7,7 +7,7 @@ Tutte le modifiche rilevanti a questo progetto verranno documentate in questo fi
 - N/A
 
 ### Changed
-- Aggiornato il template `__feeds_message.tpl` con utility Tailwind CSS per layout conversazione, testo, media e card prodotto.
+- Aggiornato il template `__feeds_notification.tpl` con utility Tailwind CSS per layout notifiche, stati unread e pulsanti azione.
 
 ### Fixed
 - N/A
