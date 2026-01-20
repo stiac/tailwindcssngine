@@ -1,49 +1,52 @@
 {if $_tpl == "featured"}
 	{if $_iteration == 1}
-		<div class="col-12 mb-4">
-			<div class="x_feat_blog position-relative overflow-hidden p-3">
+		<div class="w-full mb-6">
+			<!-- Featured blog card with Tailwind layout utilities -->
+			<div class="x_feat_blog relative overflow-hidden rounded-2xl bg-slate-900/90 p-6 shadow-lg">
 				{if $blog['needs_payment']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_payment.tpl' post_id=$blog['post_id'] price=$blog['post_price']}
 					</div>
 				{elseif $blog['needs_subscription']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_subscription.tpl'}
 					</div>
 				{elseif $blog['needs_pro_package']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_pro_package.tpl'}
 					</div>
 				{elseif $blog['needs_age_verification']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_age_verification.tpl'}
 					</div>
 				{else}
-					<div class="position-absolute overflow-hidden w-100 h-100 top-0 end-0 bottom-0 start-0 x_feat_blog_bg">
+					<!-- Background image and gradient overlay -->
+					<div class="x_feat_blog_bg absolute inset-0 overflow-hidden">
 						<div class="x_feat_blog_img_bg">
-							<img src="{$blog['blog']['parsed_cover']}" alt="" class="w-100 h-100">
+							<img src="{$blog['blog']['parsed_cover']}" alt="" class="h-full w-full object-cover">
 						</div>
-						<div class="position-absolute w-100 h-100 top-0 end-0 bottom-0 start-0 x_feat_blog_grad_bg"></div>
+						<div class="x_feat_blog_grad_bg absolute inset-0"></div>
 					</div>
-					<div class="row position-relative">
-						<div class="col-md-6 order-2 order-md-1">
-							<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-content text-white d-flex flex-column h-100">
-								<h3 class="fw-semibold overflow-hidden">{$blog['blog']['title']}</h3>
-								<div class="text small overflow-hidden mb-3">{$blog['blog']['text_snippet']|truncate:200}</div>
-								<div class="mt-auto d-flex align-items-center mw-0 x_user_info">
-									<img src="{$blog['post_author_picture']}" alt="{$blog['post_author_name']}" class="rounded-circle flex-0">
-									<div class="mw-0 mx-2 px-1 text-truncate">
-										<div class="fw-semibold text-truncate">{$blog['post_author_name']}</div>
-										<p class="m-0 opacity-75 text-truncate small">
+					<!-- Content grid -->
+					<div class="relative grid gap-6 md:grid-cols-2">
+						<div class="order-2 md:order-1">
+							<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-content flex h-full flex-col text-white">
+								<h3 class="text-2xl font-semibold leading-snug overflow-hidden">{$blog['blog']['title']}</h3>
+								<div class="text-sm text-slate-200/90 overflow-hidden mb-4">{$blog['blog']['text_snippet']|truncate:200}</div>
+								<div class="mt-auto flex items-center gap-3 min-w-0 x_user_info">
+									<img src="{$blog['post_author_picture']}" alt="{$blog['post_author_name']}" class="h-10 w-10 rounded-full object-cover flex-none">
+									<div class="min-w-0">
+										<div class="font-semibold text-white truncate">{$blog['post_author_name']}</div>
+										<p class="m-0 text-sm text-slate-200/80 truncate">
 											<span class="js_moment" data-time="{$blog['time']}">{$blog['time']}</span>
 										</p>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-6 align-self-center order-1 order-md-2 mb-3 mb-md-0">
-							<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="d-block w-100 blog-image ratio ratio-4x3">
-								<img src="{$blog['blog']['parsed_cover']}" class="img-fluid rounded-3 h-100">
+						<div class="order-1 md:order-2 self-center mb-4 md:mb-0">
+							<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-image block w-full aspect-[4/3]">
+								<img src="{$blog['blog']['parsed_cover']}" class="h-full w-full rounded-2xl object-cover">
 							</a>
 						</div>
 					</div>
@@ -51,36 +54,37 @@
 			</div>
 		</div>
 	{else}
-		<div class="col-sm-6 col-md-4 col-lg-4 mb-4">
-			<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-container bg-white overflow-hidden d-flex flex-column position-relative body-color h-100">
+		<div class="w-full sm:w-1/2 lg:w-1/3 mb-6">
+			<!-- Standard featured card -->
+			<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-container group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 transition hover:-translate-y-0.5 hover:shadow-lg body-color">
 				{if $blog['needs_payment']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_payment.tpl' post_id=$blog['post_id'] price=$blog['post_price']}
 					</div>
 				{elseif $blog['needs_subscription']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_subscription.tpl'}
 					</div>
 				{elseif $blog['needs_pro_package']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_pro_package.tpl'}
 					</div>
 				{elseif $blog['needs_age_verification']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_age_verification.tpl'}
 					</div>
 				{else}
-					<div class="blog-image ratio ratio-4x3 flex-0">
-						<img src="{$blog['blog']['parsed_cover']}">
+					<div class="blog-image aspect-[4/3] flex-none overflow-hidden">
+						<img src="{$blog['blog']['parsed_cover']}" class="h-full w-full object-cover transition duration-300 group-hover:scale-105">
 					</div>
-					<div class="blog-content p-3 d-flex flex-1 flex-column">
-						<h6 class="fw-semibold overflow-hidden">{$blog['blog']['title']}</h6>
-						<div class="text text-muted small mb-3 overflow-hidden">{$blog['blog']['text_snippet']|truncate:400}</div>
-						<div class="mt-auto d-flex align-items-center mw-0 x_user_info small">
-							<img src="{$blog['post_author_picture']}" alt="{$blog['post_author_name']}" class="rounded-circle flex-0">
-							<div class="mw-0 mx-2 px-1 text-truncate">
-								<div class="fw-medium text-truncate">{$blog['post_author_name']}</div>
-								<p class="m-0 text-muted text-truncate small">
+					<div class="blog-content flex flex-1 flex-col gap-3 p-5">
+						<h6 class="text-lg font-semibold text-slate-900 overflow-hidden">{$blog['blog']['title']}</h6>
+						<div class="text-sm text-slate-600 overflow-hidden">{$blog['blog']['text_snippet']|truncate:400}</div>
+						<div class="mt-auto flex items-center gap-3 text-sm text-slate-500 min-w-0 x_user_info">
+							<img src="{$blog['post_author_picture']}" alt="{$blog['post_author_name']}" class="h-9 w-9 rounded-full object-cover flex-none">
+							<div class="min-w-0">
+								<div class="font-medium text-slate-800 truncate">{$blog['post_author_name']}</div>
+								<p class="m-0 text-slate-500 truncate text-sm">
 									<span class="js_moment" data-time="{$blog['time']}">{$blog['time']}</span>
 								</p>
 							</div>
@@ -94,53 +98,55 @@
 	{if $_small}
 		{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}
 		{else}
-			<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="d-block body-color feeds-item px-3 side_item_hover side_item_list" title="{$blog['blog']['title']}">
-				<div class="d-flex align-items-center justify-content-between x_user_info gap-3">
-					<div class="mw-0 text-truncate">
-						<div class="fw-semibold text-truncate">
+			<!-- Compact list item -->
+			<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="body-color feeds-item block rounded-xl px-4 py-3 transition hover:bg-slate-50 side_item_hover side_item_list" title="{$blog['blog']['title']}">
+				<div class="flex items-center justify-between gap-4 x_user_info">
+					<div class="min-w-0">
+						<div class="font-semibold text-slate-900 truncate">
 							{$blog['blog']['title']}
 						</div>
-						<p class="m-0 text-muted text-truncate small">
+						<p class="m-0 text-sm text-slate-500 truncate">
 							{$blog['blog']['text_snippet']|truncate:400}
 						</p>
 					</div>
-					<div class="flex-0">
-						<img src="{$blog['blog']['parsed_cover']}" class="rounded-2">
+					<div class="flex-none">
+						<img src="{$blog['blog']['parsed_cover']}" class="h-14 w-20 rounded-lg object-cover">
 					</div>
 				</div>
 			</a>
 		{/if}
 	{else}
-		<div class="col-md-6 mb-4">
-			<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-container bg-white overflow-hidden d-flex flex-column position-relative body-color h-100">
+		<div class="w-full md:w-1/2 mb-6">
+			<!-- Standard feed card -->
+			<a href="{if $blog['needs_payment'] || $blog['needs_subscription'] || $blog['needs_pro_package'] || $blog['needs_age_verification']}{$system['system_url']}/posts/{$blog['post_id']}{else}{$system['system_url']}/blogs/{$blog['post_id']}/{$blog['blog']['title_url']}{/if}" class="blog-container group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 transition hover:-translate-y-0.5 hover:shadow-lg body-color">
 				{if $blog['needs_payment']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_payment.tpl' post_id=$blog['post_id'] price=$blog['post_price']}
 					</div>
 				{elseif $blog['needs_subscription']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_subscription.tpl'}
 					</div>
 				{elseif $blog['needs_pro_package']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_pro_package.tpl'}
 					</div>
 				{elseif $blog['needs_age_verification']}
-					<div class="ptb20 plr20">
+					<div class="px-5 py-5">
 						{include file='_need_age_verification.tpl'}
 					</div>
 				{else}
-					<div class="blog-image ratio ratio-4x3 flex-0">
-						<img src="{$blog['blog']['parsed_cover']}">
+					<div class="blog-image aspect-[4/3] flex-none overflow-hidden">
+						<img src="{$blog['blog']['parsed_cover']}" class="h-full w-full object-cover transition duration-300 group-hover:scale-105">
 					</div>
-					<div class="blog-content p-3 d-flex flex-1 flex-column">
-						<h6 class="fw-semibold overflow-hidden">{$blog['blog']['title']}</h6>
-						<div class="text text-muted small mb-3 overflow-hidden">{$blog['blog']['text_snippet']|truncate:400}</div>
-						<div class="mt-auto d-flex align-items-center mw-0 x_user_info small">
-							<img src="{$blog['post_author_picture']}" alt="{$blog['post_author_name']}" class="rounded-circle flex-0">
-							<div class="mw-0 mx-2 px-1 text-truncate">
-								<div class="fw-medium text-truncate">{$blog['post_author_name']}</div>
-								<p class="m-0 text-muted text-truncate small">
+					<div class="blog-content flex flex-1 flex-col gap-3 p-5">
+						<h6 class="text-lg font-semibold text-slate-900 overflow-hidden">{$blog['blog']['title']}</h6>
+						<div class="text-sm text-slate-600 overflow-hidden">{$blog['blog']['text_snippet']|truncate:400}</div>
+						<div class="mt-auto flex items-center gap-3 text-sm text-slate-500 min-w-0 x_user_info">
+							<img src="{$blog['post_author_picture']}" alt="{$blog['post_author_name']}" class="h-9 w-9 rounded-full object-cover flex-none">
+							<div class="min-w-0">
+								<div class="font-medium text-slate-800 truncate">{$blog['post_author_name']}</div>
+								<p class="m-0 text-slate-500 truncate text-sm">
 									<span class="js_moment" data-time="{$blog['time']}">{$blog['time']}</span>
 								</p>
 							</div>
