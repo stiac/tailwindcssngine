@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.13] - 2026-02-01
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_conversation.tpl` con utility Tailwind CSS per anteprima chat, avatar e stati hover.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.12] - 2026-01-31
 ### Added
 - N/A
