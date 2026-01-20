@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.15] - 2026-02-03
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_event.tpl` con utility Tailwind CSS per card eventi e pulsanti.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.14] - 2026-02-02
 ### Added
 - N/A
