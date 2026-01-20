@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.22] - 2026-02-10
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_page.tpl` con utility Tailwind CSS per card pagina, badge verifica, contatore like e pulsanti di azione.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.21] - 2026-02-09
 ### Added
 - N/A
