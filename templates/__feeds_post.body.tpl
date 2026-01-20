@@ -1,46 +1,46 @@
 {if $_post['for_subscriptions']}
-	<div class="main fw-bold small mb-2 d-flex align-items-center gap-1">
+	<div class="main fw-bold small mb-2 d-flex align-items-center gap-1 font-semibold text-sm mb-2 flex items-center gap-1">
 		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.9982 13.25C18.67 13.25 19.12 13.7533 19.3627 14.245L19.3632 14.2459L20.0587 15.6484L20.0645 15.654C20.0693 15.6583 20.0749 15.663 20.0811 15.6676C20.0874 15.6722 20.0935 15.6763 20.0992 15.6798L20.1075 15.6844L21.3626 15.8947C21.9028 15.9855 22.4905 16.275 22.6893 16.8985C22.8877 17.521 22.5775 18.0974 22.1899 18.486L22.1889 18.487L21.2132 19.4708C21.2098 19.4778 21.2053 19.4888 21.2014 19.5027C21.197 19.5181 21.1949 19.5314 21.1942 19.5401L21.4735 20.7579C21.5995 21.3093 21.6116 22.0753 21.0171 22.5123C20.4194 22.9516 19.6913 22.7048 19.2061 22.4159L18.0294 21.7135C18.0283 21.702 18.0142 21.6859 17.9668 21.7142L16.7916 22.4156C16.3047 22.7069 15.5783 22.9496 14.9815 22.5106C14.3883 22.0742 14.397 21.3106 14.524 20.7572L14.8031 19.5401C14.8024 19.5314 14.8003 19.5181 14.7959 19.5027C14.792 19.4888 14.7875 19.4778 14.7841 19.4708L13.8065 18.4851C13.4213 18.0967 13.1123 17.5211 13.3091 16.8998C13.5068 16.2757 14.0941 15.9855 14.6351 15.8946L15.8859 15.6851L15.893 15.681C15.8987 15.6775 15.9049 15.6734 15.9113 15.6687C15.9176 15.6639 15.9233 15.6592 15.9282 15.6547L15.9345 15.6487L16.6315 14.2431C16.8762 13.7522 17.3273 13.25 17.9982 13.25Z" fill="currentColor"/><path d="M5.74919 6.5C5.74919 3.6005 8.0997 1.25 10.9992 1.25C13.8987 1.25 16.2492 3.6005 16.2492 6.5C16.2492 9.39949 13.8987 11.75 10.9992 11.75C8.0997 11.75 5.74919 9.39949 5.74919 6.5Z" fill="currentColor"/><path d="M14.439 14.3825C14.489 14.3525 14.514 14.3375 14.5301 14.3244C14.702 14.1856 14.6657 13.9073 14.4639 13.8172C14.4449 13.8087 14.4182 13.801 14.3648 13.7855C13.8202 13.628 13.0833 13.4302 12.6038 13.3625C11.5399 13.2125 10.4581 13.2125 9.39427 13.3625C7.9298 13.5691 6.49773 14.0602 5.19288 14.8372C5.07659 14.9064 4.93296 14.9874 4.77034 15.0792C4.05753 15.4813 2.9799 16.0893 2.24174 16.8118C1.78007 17.2637 1.34141 17.8592 1.26167 18.5888C1.17686 19.3646 1.51533 20.0927 2.19434 20.7396C3.36579 21.8556 4.77158 22.75 6.58989 22.75H12.2935C12.7003 22.75 12.9037 22.75 12.9933 22.6475C13.083 22.545 13.0507 22.3047 12.9861 21.8241C12.9094 21.2541 12.9885 20.7329 13.0599 20.4219L13.0898 20.2912C13.126 20.1337 13.144 20.055 13.1229 19.9808C13.1017 19.9066 13.0448 19.8493 12.931 19.7346L12.7395 19.5414C12.1778 18.9751 11.4358 17.84 11.8771 16.4469C12.3097 15.081 13.5273 14.5747 14.322 14.4264C14.3312 14.4247 14.3358 14.4238 14.339 14.4232C14.3713 14.4164 14.398 14.4063 14.4267 14.3899C14.4295 14.3883 14.4327 14.3864 14.439 14.3825Z" fill="currentColor"/></svg>
 		{__("Subscriptions")}
 	</div>
 {/if}
 {if $_post['is_paid']}
-	<div class="text-success text-opacity-75 fw-bold small mb-2 d-flex align-items-center gap-1">
+	<div class="text-success text-opacity-75 fw-bold small mb-2 d-flex align-items-center gap-1 text-emerald-600/80 font-semibold text-sm mb-2 flex items-center gap-1">
 		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.78894 3.38546C7.87779 3.52092 7.77748 3.75186 7.57686 4.21374C7.49965 4.39151 7.42959 4.57312 7.36705 4.75819C7.29287 4.9777 7.25578 5.08746 7.17738 5.14373C7.09897 5.19999 6.99012 5.19999 6.77242 5.19999H4.18138C3.64164 5.19999 3.2041 5.63651 3.2041 6.17499C3.2041 6.71346 3.64164 7.14998 4.18138 7.14998L15.9776 7.14998C16.8093 7.13732 18.6295 7.14275 19.2563 7.26578C20.1631 7.3874 20.9639 7.65257 21.6051 8.29227C22.2463 8.93197 22.512 9.73091 22.6339 10.6355C22.7501 11.4972 22.75 12.5859 22.75 13.9062V15.9937C22.75 17.314 22.7501 18.4027 22.6339 19.2644C22.512 20.169 22.2463 20.9679 21.6051 21.6076C20.9639 22.2473 20.1631 22.5125 19.2563 22.6341C18.3927 22.75 17.3014 22.75 15.978 22.7499H9.97398C8.19196 22.7499 6.75559 22.75 5.6259 22.5984C4.45303 22.4411 3.4655 22.1046 2.68119 21.3221C1.89687 20.5396 1.55952 19.5543 1.40184 18.3842C1.24996 17.2572 1.24998 15.8241 1.25 14.0463V6.175C1.25 4.55957 2.56262 3.25001 4.18182 3.25001L6.99624 3.25C7.46547 3.25 7.70009 3.25 7.78894 3.38546ZM17.5 12.9998C18.6046 12.9998 19.5 13.8952 19.5 14.9998C19.5 16.1043 18.6046 16.9998 17.5 16.9998C16.3954 16.9998 15.5 16.1043 15.5 14.9998C15.5 13.8952 16.3954 12.9998 17.5 12.9998Z" fill="currentColor"/><path d="M19.4557 6.03151C19.563 6.0463 19.6555 5.95355 19.6339 5.84742C19.1001 3.22413 16.7803 1.25 13.9994 1.25C11.3264 1.25 9.07932 3.07399 8.43503 5.54525C8.38746 5.72772 8.52962 5.90006 8.7182 5.90006L15.9679 5.90006C16.3968 5.89365 17.0712 5.89192 17.7232 5.90742C18.3197 5.92161 19.0159 5.95164 19.4557 6.03151Z" fill="currentColor"/></svg>
 		{__("Paid")}
 	</div>
 {/if}
 {if $_post['for_adult']}
-	<div class="text-danger text-opacity-75 fw-bold small mb-2 d-flex align-items-center gap-1">
+	<div class="text-danger text-opacity-75 fw-bold small mb-2 d-flex align-items-center gap-1 text-red-600/80 font-semibold text-sm mb-2 flex items-center gap-1">
 		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4.25C11.0058 4.25 10.0648 4.41965 9.18654 4.70497C8.93836 4.78559 8.74992 4.98943 8.689 5.24317C8.62807 5.49691 8.70342 5.76408 8.88794 5.9486L18.9086 15.9693C19.2008 16.2614 19.6741 16.2623 19.9673 15.9713C20.9298 15.016 21.7239 13.9948 22.2078 13.3163C22.461 12.9642 22.75 12.5622 22.75 12C22.75 11.4378 22.4077 10.9616 22.1546 10.6095C21.4487 9.61974 20.1869 8.04576 18.4797 6.71298C16.774 5.38141 14.5706 4.25 12 4.25ZM7.27775 6.21709C7.02388 5.96322 6.62572 5.92487 6.32806 6.12561C4.20574 7.55694 2.60227 9.54781 1.79219 10.6837C1.53904 11.0358 1.25 11.4378 1.25 12C1.25 12.5622 1.59226 13.0384 1.84541 13.3905C2.55126 14.3803 3.81313 15.9542 5.52031 17.287C7.22595 18.6186 9.42944 19.75 12 19.75C14.1829 19.75 16.1016 18.9335 17.6719 17.8744C17.8576 17.7491 17.9776 17.5475 17.9991 17.3245C18.0206 17.1015 17.9413 16.8806 17.7829 16.7223L7.27775 6.21709ZM9.52944 9.5C8.8934 10.136 8.5 11.0147 8.5 11.9853C8.5 13.9264 10.0736 15.5 12.0147 15.5C12.9853 15.5 13.864 15.1066 14.5 14.4706L9.52944 9.5Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2.29289 2.29289C2.68342 1.90237 3.31658 1.90237 3.70711 2.29289L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L2.29289 3.70711C1.90237 3.31658 1.90237 2.68342 2.29289 2.29289Z" fill="currentColor"/></svg>
 		{__("Adult")}
 	</div>
 {/if}
 
 <!-- post header -->
-<div class="d-flex justify-content-between x_user_info post-header">
-	<div class="d-flex position-relative mw-0">
+<div class="d-flex justify-content-between x_user_info post-header flex items-start justify-between sm:items-center">
+	<div class="d-flex position-relative mw-0 flex relative min-w-0">
 		<!-- post picture -->
-		<div class="post-avatar position-relative flex-0">
+		<div class="post-avatar position-relative flex-0 relative shrink-0">
 			{if $_post['is_anonymous']}
-				<div class="post-avatar-anonymous text-white rounded-circle overflow-hidden d-flex align-items-center justify-content-center">
+				<div class="post-avatar-anonymous text-white rounded-circle overflow-hidden d-flex align-items-center justify-content-center text-white rounded-full overflow-hidden flex items-center justify-center">
 					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.13889 16.124C6.065 16.124 5.19444 16.9635 5.19444 17.999C5.19444 19.0346 6.065 19.874 7.13889 19.874C8.21278 19.874 9.08333 19.0346 9.08333 17.999C9.08333 16.9635 8.21278 16.124 7.13889 16.124ZM3.25 17.999C3.25 15.928 4.99112 14.249 7.13889 14.249C8.57833 14.249 9.83511 15.0031 10.5075 16.124H13.4925C14.1649 15.0031 15.4217 14.249 16.8611 14.249C19.0089 14.249 20.75 15.928 20.75 17.999C20.75 20.0701 19.0089 21.749 16.8611 21.749C14.7133 21.749 12.9722 20.0701 12.9722 17.999L11.0278 17.999C11.0278 20.0701 9.28666 21.749 7.13889 21.749C4.99112 21.749 3.25 20.0701 3.25 17.999ZM16.8611 16.124C15.7872 16.124 14.9167 16.9635 14.9167 17.999C14.9167 19.0346 15.7872 19.874 16.8611 19.874C17.935 19.874 18.8056 19.0346 18.8056 17.999C18.8056 16.9635 17.935 16.124 16.8611 16.124Z" fill="currentColor"/><path d="M5.31634 4.59645C5.6103 2.70968 7.67269 1.66315 9.35347 2.59225L9.96847 2.93221C11.2351 3.63236 12.7647 3.63236 14.0313 2.93221L14.6463 2.59225C16.3271 1.66315 18.3895 2.70968 18.6834 4.59644L19.7409 11.384C19.7788 11.6271 19.695 11.8734 19.5167 12.043C19.3383 12.2125 19.0882 12.2838 18.8472 12.2337C16.7318 11.7939 10.9673 11.1659 5.13538 12.2371C4.89638 12.281 4.65092 12.2064 4.47679 12.0369C4.30265 11.8674 4.22142 11.6241 4.25883 11.384L5.31634 4.59645Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.0005 11.9989C8.22613 11.9989 4.89604 12.6584 2.66477 13.6566C2.18196 13.8726 1.59501 13.6972 1.35376 13.265C1.11251 12.8327 1.30834 12.3072 1.79114 12.0912C4.3613 10.9414 8.00877 10.249 12.0005 10.249C15.9922 10.249 19.6397 10.9414 22.2098 12.0912C22.6926 12.3072 22.8885 12.8327 22.6472 13.265C22.406 13.6972 21.819 13.8726 21.3362 13.6566C19.1049 12.6584 15.7748 11.9989 12.0005 11.9989Z" fill="currentColor"/></svg>
 				</div>
 			{else}
-				<a class="post-avatar-picture rounded-circle overflow-hidden d-block" href="{$_post['post_author_url']}" style="background-image:url({$_post['post_author_picture']});"></a>
-				{if $_post['post_author_online']}<span class="online-dot position-absolute rounded-circle"></span>{/if}
+				<a class="post-avatar-picture rounded-circle overflow-hidden d-block rounded-full overflow-hidden block" href="{$_post['post_author_url']}" style="background-image:url({$_post['post_author_picture']});"></a>
+				{if $_post['post_author_online']}<span class="online-dot position-absolute rounded-circle absolute rounded-full"></span>{/if}
 			{/if}
 		</div>
 		<!-- post picture -->
-		<div class="mw-0 mx-2">
+		<div class="mw-0 mx-2 min-w-0 mx-2">
 			<!-- post meta -->
-			<div class="post-meta">
+			<div class="post-meta min-w-0">
 				<!-- post author -->
 				{if $_post['is_anonymous']}
-					<span class="post-author fw-semibold">{__("Anonymous")}</span>
+					<span class="post-author fw-semibold font-semibold">{__("Anonymous")}</span>
 				{else}
 					<span class="js_user-popover" data-type="{$_post['user_type']}" data-uid="{$_post['user_id']}">
-						<a class="post-author fw-semibold body-color" href="{$_post['post_author_url']}">{$_post['post_author_name']}</a>
+						<a class="post-author fw-semibold body-color font-semibold text-gray-900" href="{$_post['post_author_url']}">{$_post['post_author_name']}</a>
 					</span>
 					{if $_post['post_author_verified']}
 						<span class="verified-badge" data-bs-toggle="tooltip" {if $_post['user_type'] == "user"}title='{__("Verified User")}'{else}title='{__("Verified Page")}'{/if}>
@@ -53,16 +53,16 @@
 						</span>
 					{/if}
 					{if $_post['user_type'] == "user"}
-						<span class="text-muted small">@{$_post['user_name']}</span>
+						<span class="text-muted small text-gray-500 text-sm">@{$_post['user_name']}</span>
 					{/if}
 					{if $_post['user_type'] == "page"}
-						<span class="text-muted small">@{$_post['page_name']}</span>
+						<span class="text-muted small text-gray-500 text-sm">@{$_post['page_name']}</span>
 					{/if}
 				{/if}
 				<!-- post author -->
 
 				<!-- post-title -->
-				<span class="post-title small">
+				<span class="post-title small text-sm text-gray-500">
 					{if !$_shared && $_post['post_type'] == "shared"}
 						{__("shared")}
 						
@@ -223,7 +223,7 @@
 				<!-- post feeling -->
 
 				<!-- post time & location & privacy -->
-				<div class="post-time text-muted">
+				<div class="post-time text-muted text-gray-500 text-sm">
 					<a href="{$system['system_url']}/posts/{$_post['post_id']}" class="js_moment text-muted" data-time="{$_post['time']}">{$_post['time']}</a>
 					{if $_post['location']}
 						<span class="fw-bold mx-1">·</span> <span>{$_post['location']}</span>
@@ -548,9 +548,9 @@
 </div>
 <!-- post header -->
 
-<div class="d-flex">
-	<div class="post_empty_space flex-0"></div>
-	<div class="flex-1">
+<div class="d-flex flex gap-3">
+	<div class="post_empty_space flex-0 shrink-0"></div>
+	<div class="flex-1 min-w-0">
 		{if $_post['can_get_details'] }
 			{if $_post['needs_pro_package']}
 				{include file='_need_pro_package.tpl' _manage = true}
@@ -563,25 +563,25 @@
 						{include file='__feeds_post.text.tpl'}
 					{else}
 						{if $_post['colored_pattern']}
-							<div class="post-colored" {if $_post['colored_pattern']['type'] == "color"} style="background-image: linear-gradient(45deg, {$_post['colored_pattern']['background_color_1']}, {$_post['colored_pattern']['background_color_2']});" {else} style="background-image: url({$system['system_uploads']}/{$_post['colored_pattern']['background_image']})" {/if}>
-								<div class="post-colored-text-wrapper js_scroller" data-slimScroll-height="240">
-									<div class="post-text" dir="auto" style="color: {$_post['colored_pattern']['text_color']};">
+							<div class="post-colored rounded-xl overflow-hidden" {if $_post['colored_pattern']['type'] == "color"} style="background-image: linear-gradient(45deg, {$_post['colored_pattern']['background_color_1']}, {$_post['colored_pattern']['background_color_2']});" {else} style="background-image: url({$system['system_uploads']}/{$_post['colored_pattern']['background_image']})" {/if}>
+								<div class="post-colored-text-wrapper js_scroller max-h-60 overflow-y-auto" data-slimScroll-height="240">
+									<div class="post-text text-base leading-relaxed" dir="auto" style="color: {$_post['colored_pattern']['text_color']};">
 										{$_post['text']}
 									</div>
 								</div>
 							</div>
 						{else}
-							<div class="post-text js_readmore" dir="auto">{$_post['text']}</div>
+							<div class="post-text js_readmore text-base leading-relaxed text-gray-900" dir="auto">{$_post['text']}</div>
 						{/if}
-						<div class="post-text-translation x-hidden" dir="auto"></div>
+						<div class="post-text-translation x-hidden text-base leading-relaxed text-gray-900" dir="auto"></div>
 					{/if}
 				{/if}
 				<!-- post text -->
 
 				{if !$_shared && $_post['post_type'] == "shared" && $_post['origin']}
-					<div class="post-snippet mt-2 {if in_array($_post['origin']['post_type'], ['product', 'funding', 'job', 'course', 'poll'])}{/if}">
+					<div class="post-snippet mt-2 rounded-lg border border-gray-200/70 {if in_array($_post['origin']['post_type'], ['product', 'funding', 'job', 'course', 'poll'])}{/if}">
 						{if $_snippet}
-							<div class="post-snippet-toggle p-2 text-link small text-center main fw-medium js_show-attachments">{__("Show Attachments")}</div>
+							<div class="post-snippet-toggle p-2 text-link small text-center main fw-medium js_show-attachments text-sm font-medium text-indigo-600">{__("Show Attachments")}</div>
 						{/if}
 						<div {if $_snippet}class="x-hidden" {/if}>
 							{include file='__feeds_post.body.tpl' _post=$_post['origin'] _shared=true}
