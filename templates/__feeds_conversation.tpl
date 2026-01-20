@@ -1,19 +1,21 @@
-<li class="feeds-item px-3 side_item_hover side_item_list x_menu_content_back {if !$conversation['seen']}unread{/if}" data-last-message="{$conversation['last_message_id']}">
-	<a class="d-flex align-items-center x_user_info js_chat-start body-color" {if $conversation['user_id']}data-uid="{$conversation['user_id']}" {/if} data-cid="{$conversation['conversation_id']}" data-name="{$conversation['name']}" data-name-list="{$conversation['name_list']}" data-link="{$conversation['link']}" href="{$system['system_url']}/messages/{$conversation['conversation_id']}" {if $conversation['picture']}data-picture="{$conversation['picture']}" {/if} {if $conversation['node_id']}data-chat-box="true" {/if} {if $conversation['multiple_recipients']} data-multiple="true" {/if}>
-		<div class="position-relative flex-0">
+<li class="feeds-item px-3 side_item_hover side_item_list x_menu_content_back {if !$conversation['seen']}unread{/if} flex items-center rounded-lg px-3 py-2 transition hover:bg-gray-50" data-last-message="{$conversation['last_message_id']}">
+	<!-- Conversazione: container principale per utente e anteprima ultimo messaggio -->
+	<a class="d-flex align-items-center x_user_info js_chat-start body-color flex w-full items-center gap-3 text-gray-900" {if $conversation['user_id']}data-uid="{$conversation['user_id']}" {/if} data-cid="{$conversation['conversation_id']}" data-name="{$conversation['name']}" data-name-list="{$conversation['name_list']}" data-link="{$conversation['link']}" href="{$system['system_url']}/messages/{$conversation['conversation_id']}" {if $conversation['picture']}data-picture="{$conversation['picture']}" {/if} {if $conversation['node_id']}data-chat-box="true" {/if} {if $conversation['multiple_recipients']} data-multiple="true" {/if}>
+		<div class="position-relative flex-0 relative shrink-0">
 			{if $conversation['picture']}
-				<img src="{$conversation['picture']}" alt="{$conversation['name']}" class="rounded-circle">
+				<img src="{$conversation['picture']}" alt="{$conversation['name']}" class="rounded-circle h-10 w-10 rounded-full object-cover">
 			{else}
-				<div class="d-flex align-items-center rounded-circle overflow-hidden x_user_multi_avatar">
-					<div class="avatar" style="background-image: url('{$conversation['picture_left']}')"></div>
-					<div class="avatar" style="background-image: url('{$conversation['picture_right']}')"></div>
+				<div class="d-flex align-items-center rounded-circle overflow-hidden x_user_multi_avatar h-10 w-10 overflow-hidden rounded-full ring-1 ring-gray-200">
+					<div class="avatar h-full w-1/2 bg-cover bg-center" style="background-image: url('{$conversation['picture_left']}')"></div>
+					<div class="avatar h-full w-1/2 bg-cover bg-center" style="background-image: url('{$conversation['picture_right']}')"></div>
 				</div>
 			{/if}
 		</div>
-		<div class="mw-0 flex-1 text-truncate mx-2 px-1 d-flex align-items-center justify-content-between gap-2">
-			<div class="mw-0 text-truncate">
-				<div class="name fw-semibold">{$conversation['name']}</div>
-				<div class="text text-muted text-truncate small">
+		<div class="mw-0 flex-1 text-truncate mx-2 px-1 d-flex align-items-center justify-content-between gap-2 flex-1 truncate">
+			<div class="mw-0 text-truncate flex-1 truncate">
+				<div class="name fw-semibold text-sm font-semibold text-gray-900">{$conversation['name']}</div>
+				<div class="text text-muted text-truncate small mt-1 flex items-center gap-1 text-xs text-gray-500">
+					<!-- Anteprima ultimo messaggio con icona contestuale -->
 					{if $conversation['last_message']['image'] != ''}
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="currentColor" fill="none"><path d="M8 8.00049V6.00049C8 3.79135 9.79086 2.00049 12 2.00049C14.2091 2.00049 16 3.79135 16 6.00049V18.0005C16 20.2096 14.2091 22.0005 12 22.0005C9.79086 22.0005 8 20.2096 8 18.0005V13.5005C8 12.1198 9.11929 11.0005 10.5 11.0005C11.8807 11.0005 13 12.1198 13 13.5005V16.0005" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> {__("Photo")}
 					{elseif $conversation['last_message']['video'] != ''}
@@ -26,10 +28,12 @@
 						{$conversation['last_message']['message_orginal']}
 					{/if}
 				</div>
-				<small class="d-block"><div class="time opacity-50 small js_moment" data-time="{$conversation['last_message']['time']}">{$conversation['last_message']['time']}</div></small>
+				<small class="d-block">
+					<div class="time opacity-50 small js_moment text-xs text-gray-400" data-time="{$conversation['last_message']['time']}">{$conversation['last_message']['time']}</div>
+				</small>
 			</div>
 			{if $conversation['last_message']['image'] != ''}
-				<img class="img-fluid rounded-1 attch_img" width="25" height="25" src="{$system['system_uploads']}/{$conversation['last_message']['image']}" alt="">
+				<img class="img-fluid rounded-1 attch_img h-6 w-6 rounded-md object-cover" width="25" height="25" src="{$system['system_uploads']}/{$conversation['last_message']['image']}" alt="">
 			{/if}
 		</div>
 	</a>
