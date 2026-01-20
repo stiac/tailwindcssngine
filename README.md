@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.19**
+Versione: **1.3.20**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -34,3 +34,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_game.tpl` usa utility Tailwind CSS per card dei giochi e riga compatta.
 - Il template `__feeds_group.tpl` usa utility Tailwind CSS per card gruppo, badge piano e pulsanti di azione.
 - Il template `__feeds_job.tpl` usa utility Tailwind CSS per card lavoro, badge promozione e call-to-action.
+- Il template `__feeds_message.tpl` usa utility Tailwind CSS per layout conversazione, testo, media e card prodotto.
