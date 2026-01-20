@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.38] - 2026-02-26
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__reaction_emojis.tpl` con utility Tailwind CSS per dimensioni, allineamento e forma delle reaction.
+
+### Fixed
+- Verificata la compatibilità CSS delle reaction emoji con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.37] - 2026-02-25
 ### Added
 - N/A
