@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.20] - 2026-02-08
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_notification.tpl` con utility Tailwind CSS per layout notifiche, stati unread e pulsanti azione.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.19] - 2026-02-07
 ### Added
 - N/A
