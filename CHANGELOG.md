@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.23] - 2026-02-11
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_photo.tpl` con utility Tailwind CSS per layout, pulsanti azione e stato hover.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.22] - 2026-02-10
 ### Added
 - N/A

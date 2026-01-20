@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.22**
+Versione: **1.3.23**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
