@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.9] - 2026-01-28
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_comment.form.tpl` con utility Tailwind CSS per il form commenti.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.8] - 2026-01-27
 ### Added
 - N/A
