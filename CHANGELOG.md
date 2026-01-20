@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.2] - 2025-09-20
+
+### Added
+- Commenti nei template `.tpl` per indicare il supporto Tailwind CSS su tutto il tema.
+
+### Changed
+- Aggiornati file di versione e documentazione per il rilascio 1.3.2.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.1] - 2025-09-20
 
 ### Added

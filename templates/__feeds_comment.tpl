@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <li>
 	<div class="comment {if $_is_reply}reply{/if}" data-id="{$_comment['comment_id']}" id="comment_{$_comment['comment_id']}">
 		<div class="d-flex x_user_info gap-2">

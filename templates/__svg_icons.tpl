@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="svg-container {if isset($class)}{$class}{/if}" style="{if isset($width)}width:{$width};{/if} {if isset($height)}height:{$height};{/if} {if isset($style)}{$style}{/if}">
 
   {if $icon == "2co"}

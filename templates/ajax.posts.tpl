@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_get}
   {if $posts}
     <ul>

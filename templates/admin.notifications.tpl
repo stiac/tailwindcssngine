@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="card">
   <div class="card-header with-icon">
     <i class="fa fa-bell mr10"></i>{__("Mass Notifications")}

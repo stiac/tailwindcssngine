@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="panel-messages d-flex flex-column h-100" data-cid="{$conversation['conversation_id']}" data-color="{$conversation['color']}" data-chat-price="{$conversation['chat_price']}" data-call-price="{$conversation['call_price']}">
 	<div class="d-flex align-items-center justify-content-between gap-2 p-2 flex-0 w-100">
 		<div class="headline-font fw-semibold side_widget_title p-0 d-flex align-items-center gap-3 x_msg_user_name">

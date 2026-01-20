@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {strip}
 <!-- Tailwind utility mappings for legacy classes (transition layer) -->
 <style type="text/tailwindcss">

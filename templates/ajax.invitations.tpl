@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-header">
   <h6 class="modal-title">
     <i class="fa fa-share mr5"></i>{__("Share Invitation Code")}

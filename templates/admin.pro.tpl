@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="card">
   <div class="card-header with-icon">
     {if $sub_view == "packages"}

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl != "list"}
 	<li class="col-md-6 col-lg-4 mb-4">
 		<a href="{$system['system_url']}/games/{$_game['game_id']}/{$_game['title_url']}" class="ratio ratio-1x1 d-block">

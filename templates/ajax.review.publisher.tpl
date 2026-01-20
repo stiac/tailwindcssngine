@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-header">
   <h6 class="modal-title">
     {include file='__svg_icons.tpl' icon="star" class="main-icon mr10" width="24px" height="24px"}

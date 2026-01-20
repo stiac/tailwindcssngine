@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <ul>
   {foreach $users as $_user}
     <li>

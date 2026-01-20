@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $type == "user"}
 	<!-- user popover -->
 	<div class="user-popover-content bg-white rounded-4 p-3">

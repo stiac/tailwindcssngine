@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="{if $_small}col-4{else}col-6 col-md-4 col-lg-2{/if} {if $photo['blur']}x-blured{/if}">
 	<a class="pg_photo position-relative w-100 h-100 d-block rounded-3 {if !$_small}large{/if} js_lightbox" href="{$system['system_url']}/photos/{$photo['photo_id']}" data-id="{$photo['photo_id']}" data-image="{$system['system_uploads']}/{$photo['source']}" data-context="{$_context}" style='background-image:url("{$system['system_uploads']}/{$photo['source']}");'>
 		{if !$_small && ($_manage || $photo['manage'])}

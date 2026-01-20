@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="card">
   <div class="card-header with-icon">
     <i class="fa-solid fa-money-check-dollar mr10"></i>{__("Paid Modules")}

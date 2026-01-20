@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-header">
   <h6 class="modal-title">{__("People Who Donated To This")}</h6>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- album title & meta -->
 <div class="album-title fw-semibold h6 m-0">
 	{__($album['title'])}

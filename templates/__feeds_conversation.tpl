@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <li class="feeds-item px-3 side_item_hover side_item_list x_menu_content_back {if !$conversation['seen']}unread{/if}" data-last-message="{$conversation['last_message_id']}">
 	<a class="d-flex align-items-center x_user_info js_chat-start body-color" {if $conversation['user_id']}data-uid="{$conversation['user_id']}" {/if} data-cid="{$conversation['conversation_id']}" data-name="{$conversation['name']}" data-name-list="{$conversation['name_list']}" data-link="{$conversation['link']}" href="{$system['system_url']}/messages/{$conversation['conversation_id']}" {if $conversation['picture']}data-picture="{$conversation['picture']}" {/if} {if $conversation['node_id']}data-chat-box="true" {/if} {if $conversation['multiple_recipients']} data-multiple="true" {/if}>
 		<div class="position-relative flex-0">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="modal-body pt-2">
 	<div class="x-form bg-white publisher mini border-0 rounded-4 mt-3" data-id="{$album['album_id']}">
 		<div class="side_item_list p-3">

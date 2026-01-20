@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="col-6 col-md-4 col-lg-3">
 	<a class="pg_video position-relative w-100 h-100 d-block overflow-hidden x_adslist rounded-3 ratio ratio-1x1" href="{$system['system_url']}/{if $_is_reel}reels{else}posts{/if}/{$video['post_id']}">
 		<video class="object-cover">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $user->_logged_in}
 	<a href="javascript:void(0);" class="body-color dropdownMenuButton dropdownUserMenuButton" data-bs-toggle="dropdown" data-display="static">
 		<div class="d-flex align-items-center justify-content-between rounded-pill bg-white main_bg_half x_user_info">

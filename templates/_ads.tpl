@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_master}
 
 	{if $_ads && !in_array($page, ["static", "settings", "admin"])}

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- post body -->
 <div class="post-body px-3 pb-3 pt-2">
 	<!-- post header -->

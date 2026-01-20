@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl == "featured"}
 	{if $_iteration == 1}
 		<div class="col-12 mb-4">

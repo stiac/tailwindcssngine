@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {strip}
 
   <!-- Toasts -->

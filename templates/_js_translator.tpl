@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- _js_files.tpl -->
 {__("Ask something")}
 {__("Delete Cover")}

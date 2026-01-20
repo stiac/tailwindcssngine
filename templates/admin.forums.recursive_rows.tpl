@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <tr class="treegrid-{$row['forum_id']} {if $row['forum_section'] != '0'}treegrid-parent-{$row['forum_section']}{/if}">
   <td>
     <a target="_blank" href="{$system['system_url']}/forums/{$row['forum_id']}/{$row['title_url']}">

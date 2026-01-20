@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="chat-colors-menu">
   <div class="js_scroller" data-slimScroll-height="180">
     <div class="item js_chat-color" data-color="#5e72e4" style="color: #5e72e4;">

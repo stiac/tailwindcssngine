@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if !$standalone}<li>{/if}
 	<!-- post -->
 	{if $post['source'] == "popular"}

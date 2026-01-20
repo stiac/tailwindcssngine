@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- post body -->
 <div class="post-body {if $_lightbox}pt0{/if}">
 	<!-- post header -->

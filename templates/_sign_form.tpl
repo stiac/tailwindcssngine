@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $system['landing_page_template'] == "elengine"}
 
 	<style>

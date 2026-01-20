@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="search-wrapper">
 	<form class="position-relative">
 		<input id="search-input" type="text" class="form-control shadow-none rounded-pill" placeholder='{__("Search")}' autocomplete="off">

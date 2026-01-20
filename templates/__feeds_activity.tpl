@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <li class="col-12 col-lg-6 mb-4">
 	<div class="x_address p-3">
 		<div class="d-flex x_user_info post-header position-relative">

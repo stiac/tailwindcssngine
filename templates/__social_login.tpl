@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $system['facebook_login_enabled'] || $system['google_login_enabled'] || $system['twitter_login_enabled'] || $system['linkedin_login_enabled'] || $system['vkontakte_login_enabled'] || $system['wordpress_login_enabled'] || $system['sngine_login_enabled']}
 	{if $system['facebook_login_enabled']}
 		<a href="{$system['system_url']}/connect/facebook" class="d-flex mb-2 btn btn-social">

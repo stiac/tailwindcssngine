@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_registration}
 	{foreach $_custom_fields as $custom_field}
 		<div class="form-floating">

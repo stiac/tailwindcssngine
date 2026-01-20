@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="dropend js_live-messages">
 	{if $system['redirect_to_mobile_apps']}
 		<a href="javascript:void(0);" onclick="open_messenger_app()" class="d-block d-md-none py-1 body-color x_side_links">

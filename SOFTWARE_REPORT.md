@@ -2,7 +2,7 @@
 
 ## Dati generali
 - **Nome progetto:** Tailwind CSS Theme for Sngine
-- **Versione:** 1.3.1
+- **Versione:** 1.3.2
 - **Autore:** Team Dev
 - **Data:** 2025-09-20
 
@@ -12,7 +12,7 @@
 - **Pianificati:** Allineamento completo ai blocchi Tailwind UI.
 
 ## Attività svolte
-- 2025-09-20: Integrazione Tailwind CDN e aggiornamento documentazione.
+- 2025-09-20: Aggiunti commenti Tailwind a tutti i template `.tpl` e aggiornati file versione.
 
 ## Rischi e note tecniche
 - La coesistenza con classi legacy richiede validazioni progressive.

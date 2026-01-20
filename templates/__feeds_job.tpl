@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="col-md-6 col-lg-4 mb-4">
 	<div class="x_adslist p-3 h-100">
 		{if $post['needs_subscription']}

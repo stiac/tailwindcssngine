@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="card">
   <div class="card-header with-icon">
     <i class="fa-solid fa-shapes mr10"></i>{__("Apps")} &rsaquo; {__("APIs Settings")}

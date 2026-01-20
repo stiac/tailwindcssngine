@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!doctype html>
 
 <html data-lang="{$system['language']['code']}" {if $system['language']['dir'] == "RTL"} dir="RTL" {/if}>

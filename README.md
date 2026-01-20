@@ -1,6 +1,6 @@
 # Tailwind CSS Theme for Sngine
 
-**Versione:** 1.3.1
+**Versione:** 1.3.2
 
 Tema adattato a Tailwind CSS tramite CDN per essere utilizzabile su hosting condivisi (FTP/cPanel) senza build o compilazione.
 
@@ -8,6 +8,7 @@ Tema adattato a Tailwind CSS tramite CDN per essere utilizzabile su hosting cond
 - Integrazione Tailwind CSS via CDN senza tool di build.
 - Mappatura di classi legacy (es. `btn`, `alert`, `form-control`) in utility Tailwind per una transizione graduale.
 - Template principali aggiornati con utility Tailwind per layout e tipografia.
+- Commenti nei template per indicare il supporto Tailwind in ogni file `.tpl`.
 
 ## Requisiti
 - Hosting web compatibile con PHP e file `.tpl` (motore template Sngine).

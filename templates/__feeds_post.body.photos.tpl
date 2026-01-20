@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="pg_wrapper overflow-hidden clearfix">
 	{if $_post['photos_num'] == 1}
 		<div class="pg_1x {if $_post['photos'][0]['blur']}x-blured{/if}">

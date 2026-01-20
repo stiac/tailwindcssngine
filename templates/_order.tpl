@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div>
 	<div type="button" class="px-3 side_item_list" data-bs-toggle="collapse" data-bs-target=".order_collapse-{$order['order_id']}" aria-expanded="false">
 		<div class="row">

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $widgets}
 	<!-- Widgets -->
 	{foreach $widgets as $widget}

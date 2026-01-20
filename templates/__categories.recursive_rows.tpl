@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <tr class="treegrid-{$row['category_id']} {if $row['category_parent_id'] != '0'}treegrid-parent-{$row['category_parent_id']}{/if}">
   <td>
     {$row['category_name']}

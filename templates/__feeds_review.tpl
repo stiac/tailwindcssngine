@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $_tpl == "box" || $_tpl == ""}
 	<div class="col-12">
 		<div class="">

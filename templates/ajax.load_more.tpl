@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {if $get == 'newsfeed' || $get == 'posts_profile' || $get == 'posts_page' || $get == 'posts_group' || $get == 'posts_group_pending' || $get == 'posts_group_pending_all' || $get == 'posts_event' || $get == 'posts_event_pending' || $get == 'posts_event_pending_all' || $get == 'saved' || $get == 'scheduled' || $get == 'memories' || $get == 'boosted' || $get == 'popular' || $get == 'discover' || $get == 'watch'}
   {include file='_widget.tpl'}
   {include file='_ads.tpl'}

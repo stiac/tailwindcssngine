@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="footer-bottom-bar{if $page == 'reels'}x-hidden{/if}">
   <div class="container">
     <div class="footer-bottom-bar-links">

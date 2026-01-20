@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="job-candidate-wrapper">
   <div class="job-candidate-header">
     <div class="job-candidate-avatar">

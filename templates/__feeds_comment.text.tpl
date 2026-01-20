@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <div class="comment-replace">
 	<div class="comment-text js_readmore" dir="auto">{$_comment['text']}</div>
 	<div class="comment-text-plain x-hidden">{$_comment['text_plain']}</div>

@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 {include file='_head.tpl'}
 {include file='_header.tpl'}
 

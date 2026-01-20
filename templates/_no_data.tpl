@@ -1,3 +1,4 @@
+{* Tailwind CSS enabled *}
 <!-- no data -->
 <div class="p-3">
 	<div class="text-center text-muted py-5">
