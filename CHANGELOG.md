@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.11] - 2026-01-30
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__feeds_candidate.tpl` per usare utility Tailwind CSS su icone e stati focus.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
 ## [1.3.10] - 2026-01-29
 ### Added
 - N/A
