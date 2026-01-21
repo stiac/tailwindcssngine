@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.42] - 2026-03-02
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__svg_icons.tpl` con wrapper compatibili con Tailwind CSS.
+- Allineati gli stili SVG per usare `currentColor` con le utility Tailwind.
+
+### Fixed
+- Verificata la compatibilità CSS degli SVG con le classi Tailwind per colore e dimensioni.
+
+### Removed
+- N/A
+
 ## [1.3.41] - 2026-03-01
 ### Added
 - N/A

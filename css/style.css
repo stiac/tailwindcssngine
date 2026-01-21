@@ -3098,12 +3098,17 @@ body.night-mode .action-icon * {
 
 /* == SVG == */
 .svg-container {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
 }
 
 .svg-container svg {
   width: inherit !important;
   height: inherit !important;
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 /* == */
