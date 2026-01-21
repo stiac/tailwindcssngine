@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.58] - 2026-03-18
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_header.friend_requests.tpl` con utility Tailwind CSS per layout, dropdown e badge contatore.
+
+### Fixed
+- Verificata la compatibilità CSS del dropdown richieste amicizia con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.57] - 2026-03-17
 ### Added
 - N/A
