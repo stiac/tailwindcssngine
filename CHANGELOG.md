@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.57] - 2026-03-17
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_head.tpl` con configurazione Tailwind CDN per font e variabili tema.
+
+### Fixed
+- Verificata la compatibilità delle utility Tailwind con Bootstrap tramite priorità `important`.
+
+### Removed
+- N/A
+
 ## [1.3.56] - 2026-03-16
 ### Added
 - N/A

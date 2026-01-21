@@ -59,6 +59,24 @@
     <!-- CSS -->
 
     <!-- Tailwind CSS (CDN) -->
+    <script>
+      /* Configurazione Tailwind per convivere con Bootstrap e usare variabili di tema */
+      tailwind.config = {
+        important: true,
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            },
+            colors: {
+              brand: 'var(--main-btn)',
+              link: 'var(--main-link)'
+            }
+          }
+        }
+      };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind CSS (CDN) -->
 
