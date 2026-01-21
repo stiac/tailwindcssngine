@@ -1,14 +1,16 @@
 {strip}
 
   <!-- Toasts -->
-  <div class="toast-container p-3 bottom-0 start-0 fixed-bottom">
+  <!-- Tailwind CSS: stack dei toast con gap coerente senza rimuovere le classi Bootstrap -->
+  <div class="toast-container fixed-bottom bottom-0 start-0 p-3 flex flex-col gap-2">
   </div>
   <!-- Toasts -->
 
   <!-- Modals -->
   <div id="modal" class="modal fade">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <!-- Tailwind CSS: contenitore modale con sfondo, bordi e testo coerenti anche in dark mode -->
+      <div class="modal-content bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 border border-slate-200/70 dark:border-slate-700/70 shadow-xl">
         <div class="modal-body">
           <div class="loader pt10 pb10"></div>
         </div>
@@ -17,30 +19,32 @@
   </div>
 
   <script id="modal-login" type="text/template">
-    <div class="modal-header">
-      <h6 class="modal-title">{__("Not Logged In")}</h6>
+    <!-- Tailwind CSS: layout header/body/footer con spaziatura e bordi coerenti -->
+    <div class="modal-header flex items-center justify-between gap-4 border-b border-slate-200/70 px-6 py-4 dark:border-slate-700/70">
+      <h6 class="modal-title text-base font-semibold">{__("Not Logged In")}</h6>
     </div>
-    <div class="modal-body">
+    <div class="modal-body px-6 py-4 text-slate-600 dark:text-slate-300">
       <p>{__("Please log in to continue")}</p>
     </div>
-    <div class="modal-footer">
-      <a class="btn btn-primary" href="{$system['system_url']}/signin">{__("Login")}</a>
+    <div class="modal-footer flex items-center justify-end gap-2 border-t border-slate-200/70 px-6 py-4 dark:border-slate-700/70">
+      <a class="btn btn-primary inline-flex items-center justify-center" href="{$system['system_url']}/signin">{__("Login")}</a>
     </div>
   </script>
 
   <script id="modal-message" type="text/template">
-    <div class="modal-header">
-      <h6 class="modal-title">{literal}{{title}}{/literal}</h6>
+    <div class="modal-header flex items-center justify-between gap-4 border-b border-slate-200/70 px-6 py-4 dark:border-slate-700/70">
+      <h6 class="modal-title text-base font-semibold">{literal}{{title}}{/literal}</h6>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
       </button>
     </div>
-    <div class="modal-body">
+    <div class="modal-body px-6 py-4 text-slate-600 dark:text-slate-300">
       <p>{literal}{{{message}}}{/literal}</p>
     </div>
   </script>
 
   <script id="modal-success" type="text/template">
-    <div class="modal-body text-center" style="padding: 50px;">
+    <!-- Tailwind CSS: spaziatura verticale per stato di successo -->
+    <div class="modal-body text-center px-6 py-12">
       {include file='__svg_icons.tpl' icon="checkmark" class="main-icon mb20" width="60px" height="60px"}
       <h4>{literal}{{title}}{/literal}</h4>
       <p class="mt20">{literal}{{{message}}}{/literal}</p>
@@ -48,7 +52,8 @@
   </script>
   
   <script id="modal-info" type="text/template">
-    <div class="modal-body text-center" style="padding: 50px;">
+    <!-- Tailwind CSS: spaziatura verticale per stato informativo -->
+    <div class="modal-body text-center px-6 py-12">
       {include file='__svg_icons.tpl' icon="info" class="main-icon mb20" width="60px" height="60px"}
       <h4>{literal}{{title}}{/literal}</h4>
       <p class="mt20">{literal}{{{message}}}{/literal}</p>
@@ -56,7 +61,8 @@
   </script>
 
   <script id="modal-error" type="text/template">
-    <div class="modal-body text-center" style="padding: 50px;">
+    <!-- Tailwind CSS: spaziatura verticale per stato di errore -->
+    <div class="modal-body text-center px-6 py-12">
       {include file='__svg_icons.tpl' icon="report" class="main-icon mb20" width="60px" height="60px"}
       <h4>{literal}{{title}}{/literal}</h4>
       <p class="mt20">{literal}{{{message}}}{/literal}</p>
@@ -64,30 +70,31 @@
   </script>
 
   <script id="modal-confirm" type="text/template">
-    <div class="modal-header">
-      <h6 class="modal-title">{literal}{{title}}{/literal}</h6>
+    <div class="modal-header flex items-center justify-between gap-4 border-b border-slate-200/70 px-6 py-4 dark:border-slate-700/70">
+      <h6 class="modal-title text-base font-semibold">{literal}{{title}}{/literal}</h6>
     </div>
-    <div class="modal-body">
-      <h6>{literal}{{{message}}}{/literal}</h6>
+    <div class="modal-body px-6 py-4 text-slate-600 dark:text-slate-300">
+      <h6 class="text-slate-900 dark:text-slate-100">{literal}{{{message}}}{/literal}</h6>
       {literal}{{#password_check}}{/literal}
       <div class="form-group mt20">
-        <label class="form-label" for="modal-password-check">{__("Confirm Password")}</label>
+        <label class="form-label text-sm font-medium" for="modal-password-check">{__("Confirm Password")}</label>
         <input id="modal-password-check" name="password_check" type="password" class="form-control">
       </div>
       {literal}{{/password_check}}{/literal}
     </div>
-    <div class="modal-footer">
+    <div class="modal-footer flex items-center justify-end gap-2 border-t border-slate-200/70 px-6 py-4 dark:border-slate-700/70">
       <button type="button" class="btn btn-light" data-bs-dismiss="modal">{__("Cancel")}</button>
       <button type="button" class="btn btn-primary" id="modal-confirm-ok">{__("Confirm")}</button>
     </div>
   </script>
 
   <script id="modal-confirm-payment" type="text/template">
-    <div class="modal-body text-center" style="padding: 50px;">
+    <!-- Tailwind CSS: layout centrato per richiesta pagamento -->
+    <div class="modal-body text-center px-6 py-12">
       {include file='__svg_icons.tpl' icon="market" class="main-icon mb20" width="60px" height="60px"}
       <h4>{__("Payment Alert")}</h4>
       <p class="mt20">{__("You are about to purchase the items, do you want to proceed?")}</p>
-      <div class="mt30 text-center">
+      <div class="mt30 flex flex-wrap items-center justify-center gap-3">
         <button type="button" class="btn btn-light rounded-pill mr10" data-bs-dismiss="modal">{__("Cancel")}</button>
         <button type="button" class="btn btn-primary rounded-pill" id="modal-confirm-payment-ok">{__("Confirm")}</button>
       </div>    
@@ -95,7 +102,8 @@
   </script>
 
   <script id="modal-loading" type="text/template">
-    <div class="modal-body text-center">
+    <!-- Tailwind CSS: spinner centrato -->
+    <div class="modal-body flex items-center justify-center py-6 text-center">
       <div class="spinner-border text-primary"></div>
     </div>
   </script>
@@ -103,22 +111,23 @@
 
   <!-- Theme Switcher -->
   <script id="theme-switcher" type="text/template">
-    <div class="modal-header">
-      <h6 class="modal-title">
+    <div class="modal-header flex items-center justify-between gap-4 border-b border-slate-200/70 px-6 py-4 dark:border-slate-700/70">
+      <h6 class="modal-title flex items-center gap-2 text-base font-semibold">
         {include file='__svg_icons.tpl' icon="themes_switcher" class="main-icon mr10" width="24px" height="24px"}
         {__("Theme Switcher")}
       </h6>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
       </button>
     </div>
-    <div class="modal-body pb0 pt30">
+    <div class="modal-body pb0 pt30 px-6">
       <div class="row">
         {foreach $system['themes'] as $theme}
           <div class="col-6">
-            <div style="background: rgb(0 0 0 / 0.06); padding: 8px; border-radius: 8px; margin-bottom: 30px;">
-              <a style="display: block; position: relative; padding-bottom: 60%;" href="?theme={$theme['name']}">
-                <img style="width: 100%; height: 100%; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: 4px;" src="{$system['system_url']}/content/themes/{$theme['name']}/thumbnail.png">
-                <span style="position: absolute; background: linear-gradient(transparent, rgb(0 0 0 / 0.7)); bottom: 0; left: 0; right: 0; width: 100%; border-radius: 0 0 8px 8px; color: #fff; font-size: 14px; text-align: center; text-transform: capitalize; padding: 20px 8px 8px;">
+            <!-- Tailwind CSS: card tema con overlay e tipografia -->
+            <div class="mb-8 rounded-lg bg-black/5 p-2">
+              <a class="relative block pb-[60%]" href="?theme={$theme['name']}">
+                <img class="absolute inset-0 h-full w-full rounded-md object-cover" src="{$system['system_url']}/content/themes/{$theme['name']}/thumbnail.png" alt="{$theme['name']}">
+                <span class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/70 via-black/30 to-transparent px-2 pb-2 pt-5 text-center text-sm font-semibold capitalize text-white">
                   {$theme['name']}
                 </span>
               </a>
