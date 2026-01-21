@@ -1,13 +1,15 @@
 {if $_master}
 
 	{if $_ads && !in_array($page, ["static", "settings", "admin"])}
-		<!-- ads -->
+		<!-- ads: wrapper con utility Tailwind per card e spaziature -->
 		{foreach $_ads as $ads_unit}
-			<div class="mb-3 overflow-hidden content">
-				<h6 class="headline-font fw-semibold m-0 side_widget_title">
+			<div class="mb-3 overflow-hidden content rounded-xl border border-slate-200 bg-white shadow-sm">
+				<!-- ads: titolo sezione -->
+				<h6 class="headline-font fw-semibold m-0 side_widget_title px-3 pt-3 text-xs uppercase tracking-wide text-slate-500">
 					{__("Sponsored")}
 				</h6>
-				<div class="px-3 pt-1 side_item_list">
+				<!-- ads: contenuto annunci -->
+				<div class="px-3 pb-3 pt-2 side_item_list text-sm text-slate-700">
 					{$ads_unit['code']}
 				</div>
 			</div>
@@ -18,13 +20,15 @@
 {else}
 
 	{if $ads}
-		<!-- ads -->
+		<!-- ads: wrapper con utility Tailwind per card e spaziature -->
 		{foreach $ads as $ads_unit}
-			<div class="mb-3 overflow-hidden content">
-				<h6 class="headline-font fw-semibold m-0 side_widget_title">
+			<div class="mb-3 overflow-hidden content rounded-xl border border-slate-200 bg-white shadow-sm">
+				<!-- ads: titolo sezione -->
+				<h6 class="headline-font fw-semibold m-0 side_widget_title px-3 pt-3 text-xs uppercase tracking-wide text-slate-500">
 					{__("Sponsored")}
 				</h6>
-				<div class="px-3 pt-1 side_item_list">
+				<!-- ads: contenuto annunci -->
+				<div class="px-3 pb-3 pt-2 side_item_list text-sm text-slate-700">
 					{$ads_unit['code']}
 				</div>
 			</div>
