@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.55] - 2026-03-15
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_footer_mini.tpl` con utility Tailwind CSS e commenti per il mini footer.
+- Rafforzato il layout CSS del mini footer per supportare le nuove utility Tailwind.
+
+### Fixed
+- Verificata la compatibilità CSS del mini footer con le classi Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.54] - 2026-03-14
 ### Added
 - N/A

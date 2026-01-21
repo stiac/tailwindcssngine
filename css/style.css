@@ -543,6 +543,10 @@ body.night-mode .side_item_hover:hover {
     line-height: 16px;
 }
 .mini-footer .links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 4px;
 	gap: 4px 12px;
 }
 
