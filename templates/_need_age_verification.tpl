@@ -1,7 +1,7 @@
 <!-- need age verification -->
-<div class="px-4 py-8">
-	<!-- Tailwind card wrapper per il messaggio di verifica età -->
-	<div class="mx-auto flex max-w-xl flex-col items-center gap-4 rounded-2xl border border-slate-200/70 bg-white px-6 py-8 text-center shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
+<div class="px-4 py-10 sm:px-6 lg:px-8">
+	<!-- Card Tailwind per la verifica dell'età -->
+	<div class="mx-auto flex max-w-xl flex-col items-center gap-4 rounded-2xl border border-slate-200/70 bg-white px-6 py-8 text-center shadow-sm ring-1 ring-slate-900/5 dark:border-slate-700/60 dark:bg-slate-900/70 dark:ring-white/10">
 		<!-- Icona principale con stile Tailwind -->
 		<div class="flex h-14 w-14 items-center justify-center rounded-full bg-rose-50 text-rose-500 dark:bg-rose-500/10 dark:text-rose-300">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7" aria-hidden="true">
@@ -9,7 +9,7 @@
 			</svg>
 		</div>
 		<!-- Titolo del messaggio con font headline e colori Tailwind -->
-		<div class="text-lg">
+		<div class="space-y-2 text-lg">
 			<h5 class="headline-font text-lg font-semibold text-slate-900 dark:text-slate-100">
 				{if !$user->_data['user_adult']}
 					{__("You must be 18+ to view this content")}
@@ -17,6 +17,10 @@
 					{__("Your age must be verified to view this content")}
 				{/if}
 			</h5>
+			<!-- Testo di supporto per guidare l'utente -->
+			<p class="text-sm text-slate-600 dark:text-slate-300">
+				{__("Please complete the age verification to continue.")}
+			</p>
 		</div>
 	</div>
 </div>

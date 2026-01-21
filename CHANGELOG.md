@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.67] - 2026-03-27
+### Added
+- N/A
+
+### Changed
+- Rafforzato `_need_age_verification.tpl` con layout Tailwind CSS aggiornato e testo di supporto.
+
+### Fixed
+- Verificata la compatibilità CSS del messaggio di verifica età con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.66] - 2026-03-26
 ### Added
 - N/A
