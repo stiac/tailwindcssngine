@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.42**
+Versione: **1.3.43**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -56,3 +56,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_video.tpl` usa utility Tailwind CSS per card video, anteprima quadrata e pulsante play.
 - Il template `__social_share.tpl` usa utility Tailwind CSS per pulsanti social share con focus ring.
 - Il template `__svg_icons.tpl` usa wrapper compatibili con Tailwind CSS per dimensioni e colore delle icone.
+- Il template `_addresses.tpl` usa utility Tailwind CSS per layout griglia, card indirizzi e pulsanti azione.

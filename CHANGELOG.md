@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.43] - 2026-03-03
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_addresses.tpl` con utility Tailwind CSS per griglia, card e pulsanti.
+- Inseriti commenti descrittivi per chiarezza su layout e azioni.
+
+### Fixed
+- Verificata la compatibilità CSS degli indirizzi con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.42] - 2026-03-02
 ### Added
 - N/A
