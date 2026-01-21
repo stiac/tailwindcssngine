@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.53] - 2026-03-13
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_footer.bottom_bar.tpl` con utility Tailwind CSS e commenti descrittivi per la bottom bar mobile.
+
+### Fixed
+- Verificata la compatibilità CSS della bottom bar con le nuove utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.52] - 2026-03-12
 ### Added
 - N/A
