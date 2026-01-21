@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.48] - 2026-03-08
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_announcements.tpl` con utility Tailwind CSS per layout, colori e azioni.
+- Inseriti commenti descrittivi per chiarezza su pulsanti e contenuti annunci.
+
+### Fixed
+- Verificata la compatibilità CSS degli annunci con le nuove classi Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.47] - 2026-03-07
 ### Added
 - N/A

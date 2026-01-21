@@ -1053,7 +1053,7 @@ body.night-mode .conversation-body .translate {
 .x_announcement, .publisher, .x_notification {
 	border-bottom: 1px solid var(--border-divider);
 }
-.x_announcement .text-muted p:last-child, .text-with-list ul:last-child {
+.x_announcement .announcement-content p:last-child, .text-with-list ul:last-child {
 	margin: 0;
 }
 .text-with-list ul {
