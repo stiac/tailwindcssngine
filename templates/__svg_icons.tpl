@@ -1,4 +1,5 @@
-<div class="svg-container {if isset($class)}{$class}{/if}" style="{if isset($width)}width:{$width};{/if} {if isset($height)}height:{$height};{/if} {if isset($style)}{$style}{/if}">
+{* Wrapper compatibile con Tailwind CSS: usa utility per dimensioni/colore *}
+<div class="svg-container inline-flex items-center justify-center {if isset($class)}{$class}{/if}" style="{if isset($width)}width:{$width};{/if} {if isset($height)}height:{$height};{/if} {if isset($style)}{$style}{/if}">
 
   {if $icon == "2co"}
 
