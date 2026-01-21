@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.66] - 2026-03-26
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_need_age_verification.tpl` con utility Tailwind CSS e commenti descrittivi.
+
+### Fixed
+- Verificata la compatibilità CSS del template con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.65] - 2026-03-25
 ### Added
 - Aggiunte le stringhe UI Tailwind (menu, ricerca, notifiche e tema) in `_js_translator.tpl`.
