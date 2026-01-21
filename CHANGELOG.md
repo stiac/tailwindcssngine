@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.65] - 2026-03-25
+### Added
+- Aggiunte le stringhe UI Tailwind (menu, ricerca, notifiche e tema) in `_js_translator.tpl`.
+
+### Changed
+- Sincronizzata la classe `night-mode` del body con la classe `dark` di Tailwind per mantenere coerente il tema.
+
+### Fixed
+- Esteso il CSS base per supportare la modalità scura anche con la classe `dark` di Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.64] - 2026-03-24
 ### Added
 - N/A

@@ -33,6 +33,19 @@
 {__("This website uses cookies to ensure you get the best experience on our website")}
 {__("Got It!")}
 {__("Learn More")}
+<!-- Tailwind CSS UI strings -->
+{__("Day Mode")}
+{__("Night Mode")}
+{__("Toggle Theme")}
+{__("Open Menu")}
+{__("Close Menu")}
+{__("Open Search")}
+{__("Close Search")}
+{__("Open Notifications")}
+{__("Close Notifications")}
+{__("Open User Menu")}
+{__("Close User Menu")}
+<!-- /Tailwind CSS UI strings -->
 {__("No result found")}
 {__("You haved poked")}
 {__("Touch to unmute")}

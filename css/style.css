@@ -33,7 +33,8 @@ body.night-mode {
     --card-dark-input: #1e252b;
     --card-dark-input-color: #eaeaea;
 }
-body.night-mode .bg-white, body.night-mode .content {
+body.night-mode .bg-white, body.night-mode .content,
+html.dark .bg-white, html.dark .content {
 	background-color: #121212 !important;
 }
 	
@@ -63,7 +64,8 @@ a {
 pre {
 	padding:15px;font-size:13px;word-wrap:break-word;background-color:#f7f7f7;border:1px solid #dbdbdb;border-radius:4px
 }
-body.night-mode pre {
+body.night-mode pre,
+html.dark pre {
 	color:var(--body-color-dark);background-color:#363636;border-color:#121212
 }
 .headline-font {
