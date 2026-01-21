@@ -22,10 +22,14 @@
     /* tailwind */
     function update_tailwind_theme(isDark) {
       var root = document.documentElement;
-      if (!root) {
-        return;
+      var body = document.body;
+      /* Manteniamo sincronizzate le classi Tailwind e il tema legacy */
+      if (root) {
+        root.classList.toggle('dark', Boolean(isDark));
       }
-      root.classList.toggle('dark', Boolean(isDark));
+      if (body) {
+        body.classList.toggle('night-mode', Boolean(isDark));
+      }
     }
     update_tailwind_theme(theme_mode_night);
     window.update_tailwind_theme = update_tailwind_theme;
