@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.51] - 2026-03-11
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_chatbox.tpl` con utility Tailwind CSS per header, area messaggi e composer.
+- Inseriti commenti descrittivi per chiarire la struttura Tailwind del componente.
+
+### Fixed
+- Verificata la compatibilità CSS del chatbox con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.50] - 2026-03-10
 ### Added
 - N/A
