@@ -1,7 +1,34 @@
 {strip}
+{* Tailwind CSS: base layer e variabili di tema con fallback *}
+<style type="text/css">
+	@layer base {
+		:root {
+			/* Palette base compatibile con le utility Tailwind */
+			--body-bg: #f8fafc;
+			--main-link: #2563eb;
+			--header-background: #ffffff;
+			--header-search-bg: #ffffff;
+			--header-search-color: #0f172a;
+			--main-btn: #2563eb;
+			--plyr-color-main: #2563eb;
+			--header-color: #0f172a;
+			--header-bg-color-dark: #0f172a;
+		}
+
+		/* Stili base per rendere immediatamente coerente il tema con Tailwind */
+		body {
+			background-color: var(--body-bg);
+		}
+
+		a {
+			color: var(--main-link);
+		}
+	}
+</style>
 {if $system['css_customized']}
 	<style type="text/css">
 		:root {
+			{* Sovrascritture dinamiche del tema per Tailwind *}
 			{if $system['css_background']}
 				--body-bg: {$system['css_background']};
 			{/if}
@@ -29,15 +56,16 @@
 			{/if}
 		}
 
+		{* CSS personalizzato del pannello admin *}
 		{html_entity_decode($system['css_custome_css'], ENT_QUOTES)}
 	</style>
 {/if}
 {if $page == "admin"}
 	<style type="text/css">
 		.search-wrapper-prnt {
-			display: none !important
+			display: none !important;
 		}
-		
+
 		.x-content-width .btn {
 			display: inline-block;
 			line-height: var(--bs-btn-line-height);
