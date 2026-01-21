@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.44] - 2026-03-04
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_ads.tpl` con utility Tailwind CSS per card annunci, titolo e spaziature.
+- Inseriti commenti descrittivi per chiarezza su layout e contenuti annunci.
+
+### Fixed
+- Verificata la compatibilità CSS degli annunci con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.43] - 2026-03-03
 ### Added
 - N/A
