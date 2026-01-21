@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.47] - 2026-03-07
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_album.tpl` con utility Tailwind CSS per intestazione, pulsanti e layout foto.
+- Inseriti commenti descrittivi per chiarezza su azioni e stati album.
+
+### Fixed
+- Verificata la compatibilità CSS dell'album con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.46] - 2026-03-06
 ### Added
 - N/A
