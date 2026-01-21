@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.59] - 2026-03-19
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_header.messages.tpl` con utility Tailwind CSS per layout, dropdown e badge contatore.
+
+### Fixed
+- Verificata la compatibilità CSS del dropdown messaggi con le nuove utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.58] - 2026-03-18
 ### Added
 - N/A
