@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.64] - 2026-03-24
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_js_templates.tpl` con utility Tailwind CSS per modali, toast e theme switcher.
+
+### Fixed
+- Verificata la compatibilità CSS dei template JS con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.63] - 2026-03-23
 ### Added
 - N/A
