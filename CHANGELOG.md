@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.52] - 2026-03-12
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_chat-colors-menu.tpl` con utility Tailwind CSS per layout, accessibilità e pulsanti colore.
+- Allineato il template `chat-colors-menu` in `_js_templates.tpl` con la versione Tailwind per coerenza.
+
+### Fixed
+- Semplificato il CSS del menu colori chat per evitare conflitti con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.51] - 2026-03-11
 ### Added
 - N/A
