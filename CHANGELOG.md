@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.41] - 2026-03-01
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__stars_rate.tpl` con utility Tailwind CSS per layout e colori delle stelle.
+
+### Fixed
+- Verificata la compatibilità CSS della valutazione stelle con le nuove utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.40] - 2026-02-28
 ### Added
 - N/A
