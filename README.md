@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.50**
+Versione: **1.3.51**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -32,6 +32,7 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_comment.text.tpl` usa utility Tailwind CSS per testo, immagini e player audio dei commenti.
 - Il template `__feeds_comment.tpl` usa utility Tailwind CSS per layout, badge, reazioni e form risposte.
 - Il template `__feeds_conversation.tpl` usa utility Tailwind CSS per avatar, anteprima messaggio e stati hover.
+- Il template `_chatbox.tpl` usa utility Tailwind CSS per header, area conversazioni e composer messaggi.
 - Il template `__feeds_course.tpl` usa utility Tailwind CSS per card corsi, badge promozione e call-to-action.
 - Il template `__feeds_event.tpl` usa utility Tailwind CSS per card eventi, badge data e pulsanti.
 - Il template `__feeds_funding.tpl` usa utility Tailwind CSS per layout, progress bar e pulsante dona.

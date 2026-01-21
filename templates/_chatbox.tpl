@@ -1,20 +1,24 @@
-<div class="mb-3 overflow-hidden content panel-messages" data-cid="{$_node['chatbox_conversation']['conversation_id']}">
-	<h6 class="headline-font fw-semibold m-0 side_widget_title">
+<div class="mb-3 overflow-hidden content panel-messages rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-700/60 dark:bg-slate-900" data-cid="{$_node['chatbox_conversation']['conversation_id']}">
+	<!-- Chatbox header with Tailwind typography and spacing -->
+	<h6 class="headline-font m-0 side_widget_title text-sm font-semibold text-slate-900 dark:text-slate-100">
 		{__("Chatbox")}
 	</h6>
 
 	<div class="position-relative">
 		{if ($_node_type == "group" && $_node['i_joined'] == "approved") || ($_node_type == "event" && ($event['i_joined']['is_going'] || $event['i_joined']['is_interested']))}
-			<div class="chat-conversations js_scroller" data-slimScroll-height="320px" data-slimScroll-start="bottom">
+			<!-- Messages list styled with Tailwind spacing and dividers -->
+			<div class="chat-conversations js_scroller divide-y divide-slate-100 px-2.5 dark:divide-slate-800" data-slimScroll-height="320px" data-slimScroll-start="bottom">
 				{include file='ajax.chat.conversation.messages.tpl' conversation=$_node['chatbox_conversation']}
 			</div>
+			<!-- Typing indicator -->
 			<div class="chat-typing p-2">
-				<div class="d-flex align-items-center gap-2 small text-muted">
+				<div class="d-flex align-items-center gap-2 small text-muted text-slate-500">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="currentColor" fill="none" class="flex-0"><path d="M8 13.5H16M8 8.5H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.09881 19C4.7987 18.8721 3.82475 18.4816 3.17157 17.8284C2 16.6569 2 14.7712 2 11V10.5C2 6.72876 2 4.84315 3.17157 3.67157C4.34315 2.5 6.22876 2.5 10 2.5H14C17.7712 2.5 19.6569 2.5 20.8284 3.67157C22 4.84315 22 6.72876 22 10.5V11C22 14.7712 22 16.6569 20.8284 17.8284C19.6569 19 17.7712 19 14 19C13.4395 19.0125 12.9931 19.0551 12.5546 19.155C11.3562 19.4309 10.2465 20.0441 9.14987 20.5789C7.58729 21.3408 6.806 21.7218 6.31569 21.3651C5.37769 20.6665 6.29454 18.5019 6.5 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
 					<span class="loading-dots"><span class="js_chat-typing-users"></span> {__("Typing")}</span>
 				</div>
 			</div>
-			<div class="chat-voice-notes bg-white">
+			<!-- Voice notes panel -->
+			<div class="chat-voice-notes bg-white dark:bg-slate-900">
 				<div class="voice-recording-wrapper p-2" data-handle="chat">
 					<!-- processing message -->
 					<div class="x-hidden small fw-medium js_voice-processing-message">
@@ -49,7 +53,8 @@
 				</div>
 			</div>
 			
-			<div class="chat-attachments p-2 bg-white attachments clearfix x-hidden">
+			<!-- Attachments uploader -->
+			<div class="chat-attachments p-2 bg-white attachments clearfix x-hidden dark:bg-slate-900">
 				<ul>
 					<li class="loading">
 						<div class="progress x-progress">
@@ -59,11 +64,12 @@
 				</ul>
 			</div>
 			
-			<div class="x-form chat-form bg-white p-2">
+			<!-- Message composer -->
+			<div class="x-form chat-form bg-white p-2 dark:bg-slate-900">
 				<div class="chat-form-message">
-					<textarea class="pt-2 px-3 w-100 m-0 shadow-none border-0 d-block js_autosize js_post-message" dir="auto" rows="1" placeholder='{__("Write a message")}'></textarea>
+					<textarea class="m-0 block w-full rounded-full border-0 bg-slate-100 px-4 py-2 text-sm text-slate-900 shadow-none placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-0 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-400 js_autosize js_post-message" dir="auto" rows="1" placeholder='{__("Write a message")}'></textarea>
 				</div>
-				<ul class="x-form-tools d-flex align-items-center gap-2 pt-2">
+				<ul class="x-form-tools d-flex align-items-center gap-2 pt-2 text-slate-600 dark:text-slate-300">
 					{if $system['chat_photos_enabled']}
 						<li class="x-form-tools-attach lh-1">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" class="js_x-uploader" data-handle="chat"><path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.75"></path><circle cx="16.5" cy="7.5" r="1.5" stroke="currentColor" stroke-width="1.75"></circle><path d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path><path d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path></svg>
@@ -78,7 +84,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="12" r="9"></circle> <line x1="9" y1="10" x2="9.01" y2="10"></line> <line x1="15" y1="10" x2="15.01" y2="10"></line> <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path></svg>
 					</li>
 					<li class="x-form-tools-post js_post-message">
-						<button type="button" class="btn btn-sm btn-main">{__("Post")}</button>
+						<button type="button" class="btn btn-sm btn-main inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold shadow-sm">{__("Post")}</button>
 					</li>
 				</ul>
 			</div>
