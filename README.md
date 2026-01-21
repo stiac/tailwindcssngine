@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.49**
+Versione: **1.3.50**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -26,6 +26,7 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_ads_campaigns.tpl` usa utility Tailwind CSS per card campagne, media e descrizioni.
 - Il template `__feeds_blog.tpl` usa utility Tailwind per le card del blog e le versioni compatte.
 - Il template `_blogs_carousel.tpl` usa utility Tailwind CSS per card carousel, copertine e controlli navigazione.
+- Il template `_boosted_post.tpl` usa utility Tailwind CSS per evidenziare i post promossi con badge e contenitore dedicato.
 - Il template `__feeds_candidate.tpl` usa classi Tailwind CSS per layout, pulsanti, dettagli candidato e stati focus.
 - Il template `__feeds_comment.form.tpl` usa utility Tailwind CSS per il form commenti e gli strumenti di azione.
 - Il template `__feeds_comment.text.tpl` usa utility Tailwind CSS per testo, immagini e player audio dei commenti.

@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.50] - 2026-03-10
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_boosted_post.tpl` con utility Tailwind CSS per wrapper, badge e spaziature dedicate ai post promossi.
+- Inseriti commenti descrittivi per chiarire la struttura Tailwind del contenitore.
+
+### Fixed
+- Verificata la compatibilità CSS del post promosso con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.49] - 2026-03-09
 ### Added
 - N/A
