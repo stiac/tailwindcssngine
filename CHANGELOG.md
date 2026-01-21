@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.45] - 2026-03-05
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_ads_campaigns.tpl` con utility Tailwind CSS per card campagne, media e tipografia.
+- Inseriti commenti descrittivi per chiarezza su layout e contenuti delle campagne.
+
+### Fixed
+- Verificata la compatibilità CSS delle campagne con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.44] - 2026-03-04
 ### Added
 - N/A
