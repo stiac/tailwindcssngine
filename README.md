@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.55**
+Versione: **1.3.56**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -65,3 +65,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_album.tpl` usa utility Tailwind CSS per intestazione album, pulsanti e griglia foto.
 - Il template `_addresses.tpl` usa utility Tailwind CSS per layout griglia, card indirizzi e pulsanti azione.
 - Il template `_affiliates_levels.tpl` usa utility Tailwind CSS per griglie responsive, input e testo di supporto.
+- Il template `_head.css.tpl` definisce layer base e variabili CSS per un supporto Tailwind coerente.

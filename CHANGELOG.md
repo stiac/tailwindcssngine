@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.56] - 2026-03-16
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_head.css.tpl` con base layer Tailwind, fallback di tema e commenti descrittivi.
+
+### Fixed
+- Verificata la coerenza delle variabili CSS e degli stili base per il supporto Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.55] - 2026-03-15
 ### Added
 - N/A
