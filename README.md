@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.40**
+Versione: **1.3.41**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -51,6 +51,7 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_profile_photo.tpl` usa utility Tailwind CSS per layout griglia e foto profilo.
 - Il template `__feeds_review.tpl` usa utility Tailwind CSS per layout recensioni, avatar, foto e pulsanti.
 - Il template `__reaction_emojis.tpl` usa utility Tailwind CSS per dimensioni, allineamento e forma delle reaction.
+- Il template `__stars_rate.tpl` usa utility Tailwind CSS per layout e colori delle stelle di valutazione.
 - Il template `__feeds_user.tpl` usa utility Tailwind CSS per card utente, avatar, badge e layout pulsanti.
 - Il template `__feeds_video.tpl` usa utility Tailwind CSS per card video, anteprima quadrata e pulsante play.
 - Il template `__social_share.tpl` usa utility Tailwind CSS per pulsanti social share con focus ring.
