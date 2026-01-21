@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.46] - 2026-03-06
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_affiliates_levels.tpl` con utility Tailwind CSS per layout, input e spaziature.
+- Inseriti commenti descrittivi per chiarezza su livelli e campi affiliati.
+
+### Fixed
+- Verificata la compatibilità CSS dei livelli affiliati con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.45] - 2026-03-05
 ### Added
 - N/A
