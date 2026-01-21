@@ -733,27 +733,16 @@ body.night-mode .chat-form-message textarea, body.night-mode .chat-form-message 
 	display: none;
     position: absolute;
     bottom: 33px;
-    width: 189px;
-    margin: 0;
-    padding: 6px;
-    font-size: 13px;
-    line-height: 100%;
-    background-color: #fff;
-    border: 1px solid #f4f4f4;
-    border-radius: 16px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     z-index: 99999;
 }
 .chat-colors-menu .item {
-	float: left;
-	padding: 4px;
-	margin-right: 1px;
-	margin-bottom: 1px;
+	float: none;
+	margin: 0;
+	padding: 0;
 }
 .chat-colors-menu .item:hover {
 	cursor: pointer;
-	background: #f3f3f3;
-	border-radius: 4px;
+	background: transparent;
 }
 .conversation-user {
 	width: 30px;
