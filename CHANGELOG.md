@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.39] - 2026-02-27
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `__social_login.tpl` con utility Tailwind CSS per layout pulsanti, icone e focus.
+
+### Fixed
+- Verificata la compatibilità CSS dei pulsanti social con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.38] - 2026-02-26
 ### Added
 - N/A
