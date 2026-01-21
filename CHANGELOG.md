@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.49] - 2026-03-09
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_blogs_carousel.tpl` con utility Tailwind CSS per layout, card e controlli navigazione.
+- Inseriti commenti descrittivi per chiarezza su carousel e link.
+
+### Fixed
+- Verificata la compatibilità CSS del carousel blog con le utility Tailwind CSS.
+
+### Removed
+- N/A
+
 ## [1.3.48] - 2026-03-08
 ### Added
 - N/A
