@@ -3435,12 +3435,15 @@ body.night-mode .btn-payment:hover {
 
 
 
+/* Social share icon buttons */
 .btn-icon-social {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #fbfbfb;
   width: 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 1;
   text-align: center;
   border-radius: 50%;
 }
