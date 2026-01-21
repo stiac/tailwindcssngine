@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.62] - 2026-03-22
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_header.tpl` con classi base Tailwind e supporto alla modalità scura tramite classe `dark`.
+
+### Fixed
+- Verificata la compatibilità CSS del layout header con le nuove classi Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.61] - 2026-03-21
 ### Added
 - N/A

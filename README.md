@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.61**
+Versione: **1.3.62**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -69,5 +69,6 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_header.messages.tpl` usa utility Tailwind CSS per trigger, dropdown messaggi e badge contatore.
 - Il template `_header.notifications.tpl` usa utility Tailwind CSS per trigger notifiche, dropdown e badge contatore.
 - Il template `_header.search.tpl` usa utility Tailwind CSS per input ricerca, icona e dropdown risultati.
+- Il template `_header.tpl` aggiunge classi base Tailwind (font-sans, antialiased) e abilita la modalità scura con la classe `dark`.
 - Il template `_head.css.tpl` definisce layer base e variabili CSS per un supporto Tailwind coerente.
 - Il template `_head.tpl` include la configurazione Tailwind CDN con variabili tema e priorità utility.
