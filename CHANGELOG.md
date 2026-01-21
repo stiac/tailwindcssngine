@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.61] - 2026-03-21
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_header.search.tpl` con utility Tailwind CSS per input ricerca, icona e dropdown risultati.
+
+### Fixed
+- Verificata la compatibilità CSS della ricerca header con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.60] - 2026-03-20
 ### Added
 - N/A
