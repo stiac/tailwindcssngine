@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.54] - 2026-03-14
+### Added
+- N/A
+
+### Changed
+- Aggiornato il template `_footer.tpl` con utility Tailwind CSS e commenti descrittivi per il supporto UI del footer.
+- Ottimizzato il layout del banner PWA in CSS per gestire spaziature e wrapping con Tailwind.
+
+### Fixed
+- Verificata la compatibilità CSS del banner PWA con le nuove utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.53] - 2026-03-13
 ### Added
 - N/A

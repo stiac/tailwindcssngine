@@ -6016,9 +6016,12 @@ body.night-mode .pwa_install_banner {
   background: #000;
 }
 
+/* Tailwind support: allow wrapping and spacing when utilities are applied */
 .pwa_install_banner .inner {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .pwa_install_banner .inner .close {
@@ -6043,6 +6046,8 @@ body.night-mode .pwa_install_banner {
 
 .pwa_install_banner .inner .name {
   padding-right: 10px;
+  flex: 1 1 auto;
+  min-width: 180px;
 }
 
 .pwa_install_banner .inner .name span {
