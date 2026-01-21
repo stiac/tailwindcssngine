@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.62**
+Versione: **1.3.63**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -72,3 +72,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_header.tpl` aggiunge classi base Tailwind (font-sans, antialiased) e abilita la modalità scura con la classe `dark`.
 - Il template `_head.css.tpl` definisce layer base e variabili CSS per un supporto Tailwind coerente.
 - Il template `_head.tpl` include la configurazione Tailwind CDN con variabili tema e priorità utility.
+- Il template `_js_files.tpl` sincronizza la classe `dark` sul tag `html` per le varianti Tailwind dark mode.

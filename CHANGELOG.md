@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.63] - 2026-03-23
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_js_files.tpl` per sincronizzare la classe `dark` di Tailwind sul tag `html`.
+
+### Fixed
+- Verificata la compatibilità CSS delle varianti Tailwind con la modalità notte.
+
+### Removed
+- N/A
+
 ## [1.3.62] - 2026-03-22
 ### Added
 - N/A

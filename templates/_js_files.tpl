@@ -19,6 +19,16 @@
     /* theme */
     var theme_mode_night = {if $system['theme_mode_night']}true{else}false{/if};
     var theme_dir_rtl = {if $system['language']['dir'] == "LTR"}false{else}true{/if};
+    /* tailwind */
+    function update_tailwind_theme(isDark) {
+      var root = document.documentElement;
+      if (!root) {
+        return;
+      }
+      root.classList.toggle('dark', Boolean(isDark));
+    }
+    update_tailwind_theme(theme_mode_night);
+    window.update_tailwind_theme = update_tailwind_theme;
     /* payments */
     var currency = "{$system['system_currency']}";
     var stripe_key = {if $system['stripe_mode'] == "live"}"{$system['stripe_live_publishable']}"{else}"{$system['stripe_test_publishable']}"{/if};
