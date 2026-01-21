@@ -15,7 +15,8 @@
 </div>
 <!-- main wrapper -->
 
-<div class="d-none position-fixed w-100 h-100 top-0 start-0 end-0 bottom-0 bg-black bg-opacity-75 x_user_menu_backdrop"></div>
+<!-- Tailwind-aware backdrop for user menu (keeps Bootstrap class for legacy JS) -->
+<div class="d-none position-fixed w-100 h-100 top-0 start-0 end-0 bottom-0 bg-black bg-opacity-75 x_user_menu_backdrop hidden fixed inset-0 bg-black/75"></div>
 
 <!-- Dependencies CSS [Twemoji-Awesome] -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SebastianAigner/twemoji-amazing/twemoji-amazing.css">
@@ -70,20 +71,21 @@
 
 <!-- PWA Install Banner -->
 {if $system['pwa_enabled'] && $system['pwa_banner_enabled']}
-  <div class="pwa_install_banner" id="PWAInstallBanner">
-    <div class="inner">
-      <div class="close" id="PWAInstallClose">
+  <!-- Tailwind-ready PWA banner layout for CDN utility support -->
+  <div class="pwa_install_banner fixed bottom-0 left-0 w-full bg-white shadow-lg p-4" id="PWAInstallBanner">
+    <div class="inner flex flex-wrap items-center gap-3">
+      <div class="close flex h-8 w-8 items-center justify-center text-gray-500 hover:text-gray-700" id="PWAInstallClose">
         <i class="fa-regular fa-circle-xmark fa-lg"></i>
       </div>
-      <div class="logo">
-        <img src="{$system['system_uploads']}/{if $system['pwa_192_icon']}{$system['pwa_192_icon']}{else}pwa/icon-192x192.png{/if}" alt="logo" />
+      <div class="logo flex h-12 w-12 items-center justify-center">
+        <img class="h-10 w-10 rounded-sm" src="{$system['system_uploads']}/{if $system['pwa_192_icon']}{$system['pwa_192_icon']}{else}pwa/icon-192x192.png{/if}" alt="logo" />
       </div>
-      <div class="name">
-        <span class="title">{$system['system_title']}</span>
-        <span class="description">{$system['system_url']}</span>
+      <div class="name flex-1 min-w-[180px]">
+        <span class="title block text-base font-semibold text-gray-900">{$system['system_title']}</span>
+        <span class="description block text-sm text-gray-500">{$system['system_url']}</span>
       </div>
-      <div class="cta">
-        <button id="PWAInstallButton" class="btn btn-primary rounded-pill">{__("Install")}</button>
+      <div class="cta flex items-center">
+        <button id="PWAInstallButton" class="btn btn-primary rounded-pill inline-flex items-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">{__("Install")}</button>
       </div>
     </div>
   </div>
