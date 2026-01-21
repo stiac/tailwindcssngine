@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.60] - 2026-03-20
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_header.notifications.tpl` con utility Tailwind CSS per trigger, dropdown e badge contatore.
+
+### Fixed
+- Verificata la compatibilità CSS del dropdown notifiche con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.59] - 2026-03-19
 ### Added
 - N/A
