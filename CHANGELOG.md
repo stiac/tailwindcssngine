@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.72] - 2026-04-01
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_no_transactions.tpl` con layout Tailwind CSS per lo stato vuoto transazioni.
+
+### Fixed
+- Verificata la compatibilità CSS dello stato vuoto transazioni con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.71] - 2026-03-31
 ### Added
 - N/A

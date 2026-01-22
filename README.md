@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.71**
+Versione: **1.3.72**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -81,3 +81,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_need_pro_package.tpl` usa utility Tailwind CSS per il messaggio di accesso riservato e il pulsante di gestione.
 - Il template `_need_subscription.tpl` usa utility Tailwind CSS per overlay, tipografia e call-to-action abbonamento.
 - Il template `_no_data.tpl` usa utility Tailwind CSS per lo stato vuoto con icona, border tratteggiato e supporto dark mode.
+- Il template `_no_transactions.tpl` usa utility Tailwind CSS per lo stato vuoto delle transazioni con layout centrato e icona.
