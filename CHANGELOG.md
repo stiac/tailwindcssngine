@@ -20,10 +20,10 @@ Tutte le modifiche rilevanti a questo progetto verranno documentate in questo fi
 - N/A
 
 ### Changed
-- Aggiornato `_need_payment.tpl` con utility Tailwind CSS per overlay, tipografia e pulsante principale.
+- Aggiornato `_need_permission.tpl` con card Tailwind CSS per il messaggio di accesso negato.
 
 ### Fixed
-- Verificata la compatibilità CSS del blocco pagamento con le utility Tailwind aggiunte.
+- Verificata la compatibilità CSS del messaggio di permesso con le utility Tailwind.
 
 ### Removed
 - N/A

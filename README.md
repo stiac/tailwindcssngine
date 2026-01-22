@@ -27,6 +27,7 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `__feeds_blog.tpl` usa utility Tailwind per le card del blog e le versioni compatte.
 - Il template `_blogs_carousel.tpl` usa utility Tailwind CSS per card carousel, copertine e controlli navigazione.
 - Il template `_boosted_post.tpl` usa utility Tailwind CSS per evidenziare i post promossi con badge e contenitore dedicato.
+- Il template `_need_permission.tpl` usa un layout Tailwind CSS per il messaggio di accesso negato.
 - Il template `__feeds_candidate.tpl` usa classi Tailwind CSS per layout, pulsanti, dettagli candidato e stati focus.
 - Il template `__feeds_comment.form.tpl` usa utility Tailwind CSS per il form commenti e gli strumenti di azione.
 - Il template `__feeds_comment.text.tpl` usa utility Tailwind CSS per testo, immagini e player audio dei commenti.
