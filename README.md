@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.69**
+Versione: **1.3.70**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -79,3 +79,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_need_age_verification.tpl` usa utility Tailwind CSS per il messaggio di verifica età e il testo di supporto.
 - Il template `_need_payment.tpl` aggiunge utility Tailwind CSS per overlay, tipografia e pulsanti del blocco pagamento.
 - Il template `_need_pro_package.tpl` usa utility Tailwind CSS per il messaggio di accesso riservato e il pulsante di gestione.
+- Il template `_need_subscription.tpl` usa utility Tailwind CSS per overlay, tipografia e call-to-action abbonamento.
