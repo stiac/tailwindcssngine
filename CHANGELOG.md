@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.69] - 2026-03-29
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_need_pro_package.tpl` con layout e utility Tailwind CSS per il messaggio di accesso riservato.
+
+### Fixed
+- Verificata la compatibilità CSS del blocco pro package con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.68] - 2026-03-28
 ### Added
 - N/A
