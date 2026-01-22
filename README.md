@@ -1,6 +1,6 @@
 # TailwindCSSngine
 
-Versione: **1.3.67**
+Versione: **1.3.68**
 
 ## Descrizione
 Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` del progetto, con supporto tramite CDN per un'adozione rapida senza build.
@@ -76,3 +76,4 @@ Template e asset per l'integrazione di Tailwind CSS all'interno dei file `.tpl` 
 - Il template `_js_translator.tpl` include le stringhe UI Tailwind (menu, ricerca, notifiche, tema).
 - Il template `_js_templates.tpl` aggiunge utility Tailwind CSS per modali, toast e theme switcher.
 - Il template `_need_age_verification.tpl` usa utility Tailwind CSS per il messaggio di verifica età e il testo di supporto.
+- Il template `_need_payment.tpl` aggiunge utility Tailwind CSS per overlay, tipografia e pulsanti del blocco pagamento.

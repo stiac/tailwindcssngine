@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.68] - 2026-03-28
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_need_payment.tpl` con utility Tailwind CSS per overlay, tipografia e pulsante principale.
+
+### Fixed
+- Verificata la compatibilità CSS del blocco pagamento con le utility Tailwind aggiunte.
+
+### Removed
+- N/A
+
 ## [1.3.67] - 2026-03-27
 ### Added
 - N/A
