@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.71] - 2026-03-31
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_no_data.tpl` con layout Tailwind CSS per lo stato vuoto.
+
+### Fixed
+- Verificata la compatibilità CSS dello stato vuoto con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.70] - 2026-03-30
 ### Added
 - N/A
