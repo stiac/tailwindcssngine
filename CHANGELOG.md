@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.70] - 2026-03-30
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_need_subscription.tpl` con layout e utility Tailwind CSS per il blocco abbonamento.
+
+### Fixed
+- Verificata la compatibilità CSS del blocco abbonamento con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.69] - 2026-03-29
 ### Added
 - N/A
