@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti a questo progetto verranno documentate in questo file.
 
+## [1.3.73] - 2026-04-02
+### Added
+- N/A
+
+### Changed
+- Aggiornato `_order.tpl` con layout Tailwind CSS per riepilogo, stati e dettaglio prodotti.
+
+### Fixed
+- Verificata la compatibilità CSS del template ordini con le utility Tailwind.
+
+### Removed
+- N/A
+
 ## [1.3.72] - 2026-04-01
 ### Added
 - N/A
