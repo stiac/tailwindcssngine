@@ -1,183 +1,196 @@
-<div>
-	<div type="button" class="px-3 side_item_list" data-bs-toggle="collapse" data-bs-target=".order_collapse-{$order['order_id']}" aria-expanded="false">
-		<div class="row">
-			<div class="col-md-4 my-2">
-				<div class="fw-semibold mb-1">{__("Order")} #</div>
-				{$order['order_hash']}
+<div class="rounded-xl border border-slate-200 bg-white shadow-sm">
+	<!-- Order summary header -->
+	<div type="button" class="side_item_list w-full px-4 py-3 text-left transition hover:bg-slate-50" data-bs-toggle="collapse" data-bs-target=".order_collapse-{$order['order_id']}" aria-expanded="false">
+		<div class="grid gap-4 md:grid-cols-12 md:items-center">
+			<div class="space-y-1 md:col-span-4">
+				<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">{__("Order")} #</div>
+				<div class="text-sm font-semibold text-slate-900">{$order['order_hash']}</div>
 			</div>
 
-			<div class="col-md-4 my-2">
-				<div class="fw-semibold mb-1">{__("Order Placed")}</div>
-				{$order['insert_time']}
+			<div class="space-y-1 md:col-span-4">
+				<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">{__("Order Placed")}</div>
+				<div class="text-sm text-slate-700">{$order['insert_time']}</div>
 			</div>
 
-			<div class="col-md-2 my-2">
-				<div class="fw-semibold mb-1">{__("Status")}:</div>
+			<div class="space-y-1 md:col-span-2">
+				<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">{__("Status")}:</div>
 				{if $order['status'] == "canceled"}
-					<span class="badge bg-danger">{__($order['status'])|ucfirst}</span>
+					<span class="inline-flex items-center rounded-full bg-red-100 px-2.5 py-1 text-xs font-semibold text-red-700">{__($order['status'])|ucfirst}</span>
 				{elseif $order['status'] == "delivered"}
-					<span class="badge bg-success">{__($order['status'])|ucfirst}</span>
+					<span class="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700">{__($order['status'])|ucfirst}</span>
 				{else}
-					<span class="badge bg-info">{__($order['status'])|ucfirst}</span>
+					<span class="inline-flex items-center rounded-full bg-sky-100 px-2.5 py-1 text-xs font-semibold text-sky-700">{__($order['status'])|ucfirst}</span>
 				{/if}
 			</div>
 
-			<div class="col-md-2 my-2 text-md-end">
-				<button class="btn btn-dark">{__("View")}</button>
+			<div class="md:col-span-2 md:text-right">
+				<button class="inline-flex items-center justify-center rounded-md bg-slate-900 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800">
+					{__("View")}
+				</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="collapse order_collapse-{$order['order_id']}">
-		<div class="px-3 pb-3">
-			<hr class="hr-2 mt-0">
-			<div class="d-flex align-items-start justify-content-between gap-2 mb-3">
-				<div>
+		<div class="px-4 pb-4">
+			<hr class="border-slate-200">
+			<div class="flex flex-wrap items-start justify-between gap-2">
+				<div class="flex flex-wrap items-center gap-2">
 					{if !$for_admin}
-						<!-- update order -->
+						<!-- Order actions -->
 						{if $sales}
 							{if $order['status'] != "delivered" && $order['status'] != "canceled"}
-								<button class="btn btn-primary" data-toggle="modal" data-url="users/orders.php?do=edit&id={$order['order_id']}">
+								<button class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500" data-toggle="modal" data-url="users/orders.php?do=edit&id={$order['order_id']}">
 									{__("UPDATE")}
 								</button>
 							{/if}
 						{else}
 							{if $order['status'] != "delivered" && $order['status'] != "canceled"}
-								<button class="btn btn-primary" data-toggle="modal" data-url="users/orders.php?do=edit&id={$order['order_id']}">
+								<button class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500" data-toggle="modal" data-url="users/orders.php?do=edit&id={$order['order_id']}">
 									{__("UPDATE")}
 								</button>
 							{/if}
 						{/if}
-						<!-- update order -->
 
-						<!-- invoice -->
-						<button class="btn btn-link main js_shopping-download-invoice" data-id="{$order['order_id']}">
+						<button class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-500 js_shopping-download-invoice" data-id="{$order['order_id']}">
 							{__("INVOICE")}
 						</button>
-						<!-- invoice -->
+						<!-- Order actions -->
 					{/if}
 				</div>
-				<button type="button" class="btn btn-gray border-0 p-2 rounded-circle lh-1 flex-0" data-bs-toggle="collapse" data-bs-target=".order_collapse-{$order['order_id']}">
+				<button type="button" class="inline-flex items-center justify-center rounded-full bg-slate-100 p-2 text-slate-500 shadow-sm transition hover:bg-slate-200" data-bs-toggle="collapse" data-bs-target=".order_collapse-{$order['order_id']}">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none"><path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg>
 				</button>
 			</div>
-			
+
 			{if $order['status'] == "shipped"}
-				<div class="alert alert-warning">
-					<div class="text">
-						{__("This order has been shipped and will be marked as delivered automatically after")} <span class="badge bg-light text-primary">{$order['automatic_delivery_days']}</span> {__("days")} ({__("Max")} {$system['market_delivery_days']} {__("days")})
+				<div class="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+					<div class="flex flex-wrap items-center gap-1">
+						<span>{__("This order has been shipped and will be marked as delivered automatically after")}</span>
+						<span class="inline-flex items-center rounded-full bg-white px-2 py-0.5 text-xs font-semibold text-amber-700">{$order['automatic_delivery_days']}</span>
+						<span>{__("days")} ({__("Max")} {$system['market_delivery_days']} {__("days")})</span>
 					</div>
 				</div>
 			{/if}
-			
-			<div class="row">
-				<div class="col-md-5 col-lg-4 mb-4 mb-md-0">
-					<!-- Payments -->
-					<div class="heading-small">
-						{__("Payments")}
-					</div>
 
-					<div class="d-flex align-items-center justify-content-between mb5">
-						<span>{if $sales}{__("Subtotal")}{else}{__("Total")}{/if}:</span>
-						<span class="{if $sales}{else}text-md fw-medium{/if}">
-							{print_money(number_format($order['sub_total'], 2))}
-						</span>
-					</div>
-					{if $sales}
-						{if $order['total_commission'] > 0}
-							<div class="d-flex align-items-center justify-content-between mb5">
-								<span>{__("Commission")}:</span>
-								<span>
-									- {print_money(number_format($order['total_commission'], 2))}
+			<div class="mt-6 grid gap-6 lg:grid-cols-12">
+				<div class="space-y-6 lg:col-span-4">
+					<!-- Payments -->
+					<div class="space-y-3">
+						<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">
+							{__("Payments")}
+						</div>
+
+						<div class="flex items-center justify-between text-sm text-slate-600">
+							<span>{if $sales}{__("Subtotal")}{else}{__("Total")}{/if}:</span>
+							<span class="{if $sales}{else}text-base font-semibold text-slate-900{/if}">
+								{print_money(number_format($order['sub_total'], 2))}
+							</span>
+						</div>
+						{if $sales}
+							{if $order['total_commission'] > 0}
+								<div class="flex items-center justify-between text-sm text-slate-600">
+									<span>{__("Commission")}:</span>
+									<span>- {print_money(number_format($order['total_commission'], 2))}</span>
+								</div>
+							{/if}
+
+							<div class="flex items-center justify-between text-sm text-slate-600">
+								<span>{__("Total")}:</span>
+								<span class="text-base font-semibold text-slate-900">
+									{print_money(number_format($order['final_price'], 2))}
 								</span>
 							</div>
 						{/if}
-			
-						<div class="d-flex align-items-center justify-content-between mb-4 pb-1">
-							<span>{__("Total")}:</span>
-							<span class="text-md fw-medium">
-								{print_money(number_format($order['final_price'], 2))}
-							</span>
-						</div>
-					{/if}
+					</div>
 					<!-- Payments -->
-					
-					<!-- Tracking Details -->
-					<div class="heading-small mt-4">
-						{if $order['is_digital']}
-							{__("Download Details")}
-						{else}
-							{__("Tracking Details")}
-						{/if}
-					</div>
-					<div class="mb-4 pb-1">
-						{if $order['is_digital']}
-							<div>
-								<div><strong class="fw-medium">{__("Download Link")}:</strong></div>
-								{if $order['items'][0]['post']['product']['product_file_source']}
-									<div>
-										<a class="btn btn-sm btn-gray" href="{$system['system_uploads']}/{$order['items'][0]['post']['product']['product_file_source']}" target="_blank">{__("Download")}</a>
-									</div>
-								{else}
-									<div>
-										<a class="btn btn-sm btn-gray" href="{$order['items'][0]['post']['product']['product_download_url']}" target="_blank">{__("Download")}</a>
-									</div>
-								{/if}
-							</div>
-						{else}
-							<div class="mb-2">
-								<div><strong class="fw-medium">{__("Tracking Link")}:</strong></div>
-								<div>
-									{if $order['tracking_link']}<a href="{$order['tracking_link']}" target="_blank">{$order['tracking_link']}</a>{else}{__("N/A")}{/if}
-								</div>
-							</div>
 
-							<div class="">
-								<div><strong class="fw-medium">{__("Tracking Number")}:</strong></div>
-								<div>
-									{if $order['tracking_number']}{$order['tracking_number']}{else}{__("N/A")}{/if}
+					<!-- Tracking Details -->
+					<div class="space-y-3">
+						<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">
+							{if $order['is_digital']}
+								{__("Download Details")}
+							{else}
+								{__("Tracking Details")}
+							{/if}
+						</div>
+						<div class="space-y-3 text-sm text-slate-600">
+							{if $order['is_digital']}
+								<div class="space-y-2">
+									<div class="font-semibold text-slate-700">{__("Download Link")}:</div>
+									{if $order['items'][0]['post']['product']['product_file_source']}
+										<div>
+											<a class="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50" href="{$system['system_uploads']}/{$order['items'][0]['post']['product']['product_file_source']}" target="_blank">{__("Download")}</a>
+										</div>
+									{else}
+										<div>
+											<a class="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50" href="{$order['items'][0]['post']['product']['product_download_url']}" target="_blank">{__("Download")}</a>
+										</div>
+									{/if}
 								</div>
-							</div>
-						{/if}
+							{else}
+								<div class="space-y-2">
+									<div class="font-semibold text-slate-700">{__("Tracking Link")}:</div>
+									<div>
+										{if $order['tracking_link']}
+											<a class="text-indigo-600 underline-offset-2 hover:underline" href="{$order['tracking_link']}" target="_blank">{$order['tracking_link']}</a>
+										{else}
+											{__("N/A")}
+										{/if}
+									</div>
+								</div>
+
+								<div class="space-y-2">
+									<div class="font-semibold text-slate-700">{__("Tracking Number")}:</div>
+									<div>
+										{if $order['tracking_number']}{$order['tracking_number']}{else}{__("N/A")}{/if}
+									</div>
+								</div>
+							{/if}
+						</div>
 					</div>
 					<!-- Tracking Details -->
-					
+
 					<!-- Shipping Addresses -->
-					<div class="heading-small mb-1">
-						{__("Shipping Addresses")}
-					</div>
-					<div class="x_address m-0 p-3">
-						<div class="h6 fw-medium mb-1">{$order['buyer_fullname']}</div>
-						<div class="small">{$order['address_details']}</div>
-						<div class="small">{$order['address_city']}</div>
-						<div class="small">{$order['address_country']}</div>
-						<div class="small">{$order['address_zip_code']}</div>
-						<div class="small">{$order['address_phone']}</div>
+					<div class="space-y-2">
+						<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">
+							{__("Shipping Addresses")}
+						</div>
+						<div class="x_address rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600">
+							<div class="text-sm font-semibold text-slate-900">{$order['buyer_fullname']}</div>
+							<div>{$order['address_details']}</div>
+							<div>{$order['address_city']}</div>
+							<div>{$order['address_country']}</div>
+							<div>{$order['address_zip_code']}</div>
+							<div>{$order['address_phone']}</div>
+						</div>
 					</div>
 					<!-- Shipping Addresses -->
 				</div>
 
-				<div class="col-md-7 col-lg-8">
-					 <!-- Order Items -->
-					<div class="heading-small pb-0">
+				<div class="space-y-4 lg:col-span-8">
+					<!-- Order Items -->
+					<div class="text-xs font-semibold uppercase tracking-wide text-slate-500">
 						{__("Items")}
 					</div>
 
-					<div>
+					<div class="space-y-4">
 						{foreach $order['items'] as $order_item}
-							<div class="side_item_list d-flex align-items-start gap-3 x_group_list x_cart_list">
-								<a href="{$system['system_url']}/posts/{$order_item['post']['post_id']}" class="flex-0">
+							<div class="side_item_list x_group_list x_cart_list flex flex-col gap-4 rounded-lg border border-slate-200 p-4 sm:flex-row">
+								<a href="{$system['system_url']}/posts/{$order_item['post']['post_id']}" class="flex-none">
 									{if $order_item['post']['photos_num'] > 0}
-										<img src="{$system['system_uploads']}/{$order_item['post']['photos'][0]['source']}" class="rounded-3">
+										<img src="{$system['system_uploads']}/{$order_item['post']['photos'][0]['source']}" class="h-20 w-20 rounded-md object-cover">
 									{else}
-										<img src="{$system['system_url']}/content/themes/{$system['theme']}/images/blank_product.png" class="rounded-3">
+										<img src="{$system['system_url']}/content/themes/{$system['theme']}/images/blank_product.png" class="h-20 w-20 rounded-md object-cover">
 									{/if}
 								</a>
 
-								<div class="flex-1">
-									<div class="">
-										<a class="text-md fw-semibold body-color" href="{$system['system_url']}/posts/{$order_item['post']['post_id']}">{$order_item['post']['product']['name']}</a>
-										<div class="">
+								<div class="flex-1 space-y-2">
+									<div class="space-y-1">
+										<a class="text-sm font-semibold text-slate-900 hover:text-indigo-600" href="{$system['system_url']}/posts/{$order_item['post']['post_id']}">
+											{$order_item['post']['product']['name']}
+										</a>
+										<div class="text-sm text-slate-600">
 											{if $order_item['post']['product']['price'] > 0}
 												{$order_item['post']['product']['price_formatted']}
 											{else}
@@ -185,8 +198,8 @@
 											{/if}
 										</div>
 									</div>
-									<div class="mt-2 pt-1">
-										<strong class="fw-medium">{__("Qty:")}</strong>
+									<div class="text-sm text-slate-600">
+										<span class="font-semibold text-slate-700">{__("Qty:")}</span>
 										{$order_item['quantity']}
 									</div>
 								</div>
@@ -198,5 +211,4 @@
 			</div>
 		</div>
 	</div>
-	<hr class="m-0">
 </div>
